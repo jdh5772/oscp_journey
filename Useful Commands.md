@@ -1,4 +1,4 @@
-# PDF 메타데이터 확인
+# exiftool
 
 ```bash
 # PDF 파일의 모든(exiftool이 아는 한) 메타데이터를 최대한 상세히 출력
