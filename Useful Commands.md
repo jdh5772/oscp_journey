@@ -31,3 +31,8 @@ wget http://ip/test.txt -O /tmp/test.txt
 ```
 
 - `-O` : 데이터 저장(대문자)
+
+# find
+```bash
+find . -name '*config*' 2>/dev/null
+```
