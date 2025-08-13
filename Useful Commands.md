@@ -18,6 +18,7 @@ exiftool -a -u brochure.pdf
 i686-w64-mingw32-gcc 42341.c -o syncbreeze_exploit.exe -lws2_32
 ```
 
+---
 # curl
 ```bash
 curl -L http://192.168.132.65
@@ -25,6 +26,7 @@ curl -L http://192.168.132.65
 
 - `-L` : redirection
 
+---
 # wget
 ```bash
 wget http://ip/test.txt -O /tmp/test.txt
@@ -32,6 +34,7 @@ wget http://ip/test.txt -O /tmp/test.txt
 
 - `-O` : 데이터 저장(대문자)
 
+---
 # find
 ```bash
 find . -name '*config*' 2>/dev/null
