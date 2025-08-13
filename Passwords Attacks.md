@@ -16,3 +16,19 @@ hashcat -m 13400 keepass.hash /usr/share/wordlists/rockyou.txt -r /usr/share/has
 ```
 login with master password
 ```
+
+---
+ 
+# SSH Private Key Passphrase Cracking
+
+``` bash
+ssh2john id_rsa > ssh.hash
+```
+``` bash
+sudo sh -c 'cat /home/kali/passwordattacks/ssh.rule >> /etc/john/john.conf'
+```
+``` bash
+john --wordlist=ssh.passwords --rules=sshRules ssh.hash
+```
+
+---
