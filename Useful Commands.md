@@ -39,3 +39,11 @@ wget http://ip/test.txt -O /tmp/test.txt
 ```bash
 find . -name '*config*' 2>/dev/null
 ```
+---
+
+# sqlite3
+```
+sqlite3 {dbname}
+.tables
+select * from user;
+```
