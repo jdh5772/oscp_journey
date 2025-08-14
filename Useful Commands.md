@@ -47,4 +47,5 @@ sqlite3 {dbname}
 .headers on   # 컬럼 이름 출력
 .mode column  # 표 형식으로 출력
 select * from user;
+.quit
 ```
