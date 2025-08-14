@@ -1,7 +1,6 @@
 # exiftool
 
 ```bash
-# PDF 파일의 모든(exiftool이 아는 한) 메타데이터를 최대한 상세히 출력
 exiftool -a -u brochure.pdf
 ```
 
@@ -42,8 +41,10 @@ find . -name '*config*' 2>/dev/null
 ---
 
 # sqlite3
-```
+```bash
 sqlite3 {dbname}
 .tables
+.headers on   # 컬럼 이름 출력
+.mode column  # 표 형식으로 출력
 select * from user;
 ```
