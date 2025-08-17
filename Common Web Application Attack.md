@@ -1,3 +1,5 @@
+- phpinfo.php 파일에서 경로 및 사용 가능 코드 확인
+---
 # 🗂 Directory Traversal (Path Traversal)
 
 `https://example.com/cms/login.php?language=en.html`  
