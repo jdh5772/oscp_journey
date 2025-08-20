@@ -120,4 +120,8 @@ mysql -hlocalhost -uadmin -padmin --skip-ssl
 SHOW GRANTS FOR CURRENT_USER();
 ```
 - 현재 접속한 계정의 권한 확인
-  
+```mysql
+update planning_user set password ='df5b909019c9b1659e86e0d6bf8da81d6fa3499e' where user_id='ADM';
+```
+- 문자는 ''로 감싸줘야 인식.
+- 감싸지 않으면 컬럼명으로 인식한다.
