@@ -111,3 +111,13 @@ sqlmap -u "http://192.168.211.52:3305/zm/index.php" \
 - SQL Injection을 통해 DB 서버에 접근한 뒤, **운영체제(OS) 명령어 쉘**을 실행하려는 옵션입니다.  
 - DB 계정 권한이 충분하다면 `whoami`, `ls`, `id` 같은 명령을 실행할 수 있습니다.  
 - 권한이 제한적일 경우 실패할 수 있습니다.
+---
+# mysql
+```bash
+mysql -hlocalhost -uadmin -padmin --skip-ssl
+```
+```mysql
+SHOW GRANTS FOR CURRENT_USER();
+```
+- 현재 접속한 계정의 권한 확인
+  
