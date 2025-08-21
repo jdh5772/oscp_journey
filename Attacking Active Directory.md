@@ -90,3 +90,26 @@ impacket-secretsdump -just-dc-user dave corp.com/jeffadmin:"BrouhahaTungPerorate
 -   **corp.com/jeffadmin** : 인증에 사용할 도메인/계정.
 -   **패스워드** : 계정 암호.
 -   **@192.168.50.70** : 도메인 컨트롤러 IP.
+
+---
+# CrackMapExec LDAP + BloodHound
+```bash
+cme ldap hokkaido-aerospace.com -u hrapp-service -p 'Untimed$Runny' --bloodhound -c all -ns 192.168.94.135
+```
+
+- Linux/Kali 등에서 바로 실행 가능. LDAP 기반으로 대부분의 정보를 수집 가능하므로 SharpHound을 직접 업로드하지 않아도 됨.
+
+1. **`cme ldap hokkaido-aerospace.com`**
+    - `ldap`: LDAP 프로토콜을 사용하여 도메인 컨트롤러와 상호작용.
+    - `hokkaido-aerospace.com`: 대상 도메인 이름.
+
+2. **`--bloodhound`**
+    - CME의 BloodHound 모듈 활성화.
+
+4. **`-c all`**
+    - BloodHound 모듈에서 실행할 **collector 옵션**을 지정.
+    - `all` → 모든 수집기를 실행 (유저, 그룹, 컴퓨터, ACL, 세션 등).
+
+4. **`-ns 192.168.94.135`**
+    - `-ns`: 사용할 DNS 서버 지정 옵션.
+    - `192.168.94.135`: DNS 서버의 IP 주소, 보통 도메인 컨트롤러.
