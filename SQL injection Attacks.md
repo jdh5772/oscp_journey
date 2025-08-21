@@ -12,6 +12,11 @@ SELECT @@version;
 → MSSQL 서버 버전 확인
 
 ```sql
+enum_db
+```
+→ enumeration DB
+
+```sql
 SELECT * FROM offsec.information_schema.tables;
 ```
 → 데이터베이스 `offsec`의 모든 테이블 목록 확인
@@ -22,7 +27,38 @@ SELECT * FROM offsec.dbo.users;
 → 데이터베이스 `offsec`의 `users` 테이블 내용 조회
 
 ---
+# SQL Server - IMPERSONATE 권한 확인
+```sql
+SELECT DISTINCT b.name
+FROM sys.server_permissions a
+INNER JOIN sys.server_principals b
+    ON a.grantor_principal_id = b.principal_id
+WHERE a.permission_name = 'IMPERSONATE';
 
+EXECUTE AS LOGIN = 'hrappdb-reader'
+```
+1. **`sys.server_permissions`**
+   - SQL Server의 서버 수준 권한 정보를 담고 있는 시스템 뷰입니다.
+   - `permission_name` 컬럼에 어떤 권한이 부여됐는지 표시됩니다.
+
+2. **`sys.server_principals`**
+   - 서버 수준에서 정의된 보안 주체(Principal) 정보를 담고 있는 뷰입니다.
+   - 로그인 계정, Windows 로그인, SQL 로그인, 서버 역할 등이 포함됩니다.
+
+3. **JOIN 조건**
+   ```sql
+   ON a.grantor_principal_id = b.principal_id
+   ```
+   - 권한을 부여한 **Grantor(부여자)** 의 ID를 보안 주체와 매칭합니다.
+   - 즉, 누가 이 권한을 부여했는지를 확인할 수 있습니다.
+
+4. **WHERE 조건**
+   ```sql
+   WHERE a.permission_name = 'IMPERSONATE'
+   ```
+   - `IMPERSONATE` 권한만 필터링합니다.
+   - 이는 다른 계정으로 가장할 수 있는 권한을 의미합니다.
+---
 # 💻 MSSQL Code Execution
 
 ```bash
