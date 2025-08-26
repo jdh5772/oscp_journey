@@ -28,6 +28,11 @@ sudo nmap --scrip vuln <ip>
 ```
 - 취약점을 찾기 어려울 때 nmap 실행해서 확인
 - /etc/hosts에 등록하고 난 뒤에 nmap 한번 더 실행해주기.
+
+```bash
+sudo nmap -Pn <ip>
+```
+- ping 테스트가 안되더라도 서버가 열려있을 수 있으니 확인
 ---
 # FTP
 - `ls -al`로 숨겨진 파일 확인 가능.
