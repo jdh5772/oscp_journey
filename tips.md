@@ -9,6 +9,11 @@
 - `/var/mail`에 있는 내용 확인
 - github에서 `"$pass"`로 pass 변수 찾기
 ---
+# windows ssh file location
+```powershell
+C:\Users\<Username>\.ssh
+```
+---
 # 리버스 셸 연결이 안될 때
 - nc/bash/python3 등 리버스 연결이 되지 않는다면 elf 파일 혹은 exe 파일을 만들어서 전달해서 실행시켜보기.
 - 리스닝 포트를 well knwon 포트(80,443 등)로 바꿔서 받아보기.
