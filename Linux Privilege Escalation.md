@@ -29,6 +29,12 @@ dpkg -l
 ```
 ```bash
 find / -writable -type d 2>/dev/null
+
+find /etc -writable -type f 2>/dev/null
+
+find /usr -writable -type f 2>/dev/null
+
+find /var -writable -type f 2>/dev/null
 ```
 ```bash
 # 마운트 및 디스크 정보 조회
