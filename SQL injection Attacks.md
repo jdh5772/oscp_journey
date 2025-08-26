@@ -1,3 +1,8 @@
+# Login Bypass
+```sql
+'OR ''='
+```
+
 # 🗂 MSSQL Client Connection
 
 ```bash
