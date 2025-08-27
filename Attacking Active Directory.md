@@ -3,6 +3,8 @@
 netexec smb [ip] -u guest -p '' --rid-brute
 
 ./kerbrute_linux_amd64 userenum --dc 192.168.133.40 -d haero /usr/share/seclists/Usernames/xato-net-10-million-usernames.txt
+
+./enum4linux <ip>
 ```
 
 ---
