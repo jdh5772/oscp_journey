@@ -41,3 +41,42 @@ sudo nmap -Pn <ip>
 ---
 # FTP
 - `ls -al`로 숨겨진 파일 확인 가능.
+---
+# Interesting File Path
+```bash
+/etc/passwd
+/etc/shadow
+/etc/issue
+/etc/group
+/etc/hostname
+
+/var/log/apache/access.log
+/var/log/apache2/access.log
+/var/log/httpd/access_log
+/var/log/apache/error.log
+/var/log/apache2/error.log
+/var/log/httpd/error_log
+/var/log/messages
+/var/log/cron.log
+/var/log/auth.log
+
+/var/www/html/wp-config.php <-- Wordpress
+/var/www/configuration.php <-- Joomla
+/var/www/html/inc/header.inc.php <-- Dolphin
+/var/www/html/sites/default/settings.php <-- Drupal
+/var/www/configuration.php <-- Mambo
+/var/www/config.php <-- PHP
+```
+```powershell
+C:/Windows/System32/drivers/etc/hosts
+C:/Windows/Panther/Unattend/Unattended.xml
+C:/Windows/Panther/Unattended.xml
+C:/Windows/Panther/Unattend.txt
+C:/Unattend.xml
+C:/Autounattend.xml
+C:/Windows/system32/sysprep
+
+C:/inetpub/wwwroot
+C:/inetpub/wwwroot/web.config
+C:/inetpub/logs/logfiles
+```
