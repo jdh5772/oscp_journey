@@ -64,6 +64,11 @@ find / -perm -4000 -type f 2>/dev/null
 sudo -l
 ```
 ---
+# Linux Exploit Suggester
+- https://github.com/The-Z-Labs/linux-exploit-suggester
+- 예전 버전 리눅스 취약점 발견에 용이
+---
+
 # disk group privilege escalation
 - https://www.hackingarticles.in/disk-group-privilege-escalation/
 - `disk` 그룹은 **로우 블록 디바이스**(예: `/dev/sda`, `/dev/nvme0n1p2`)에 접근할 수 있습니다.  
