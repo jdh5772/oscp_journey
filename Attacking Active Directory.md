@@ -6,7 +6,13 @@ netexec smb [ip] -u guest -p '' --rid-brute
 
 ./enum4linux <ip>
 ```
-
+---
+# Impacket secretsdump
+```bash
+impacket-secretsdump -ntds ntds.dit -system SYSTEM LOCAL
+```
+- `-system SYSTEM` : `C:\Windows\System32\config\SYSTEM`
+- `LOCAL` : ntds.dit와 SYSTEM 파일을 로컬에서 분석
 ---
 # LDAP
 ```bash
