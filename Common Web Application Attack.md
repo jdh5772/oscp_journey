@@ -1,3 +1,7 @@
+# Bypass WAF
+`X-Forwarded-For: 127.0.0.1`
+
+---
 # phpinfo.php
 - 파일에서 경로 및 사용 가능 코드 확인
 - 확장 모듈 확인
