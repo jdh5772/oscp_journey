@@ -1,3 +1,11 @@
+# Windows Download Command
+```powershell
+certutil -urlcache -f -split <target>
+
+Invoke-WebRequest <target> -OutFile <Path>
+```
+
+---
 # exiftool
 
 ```bash
