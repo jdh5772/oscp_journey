@@ -128,4 +128,9 @@ cme ldap hokkaido-aerospace.com -u 'hrapp-service' -p 'Untimed$Runny' --bloodhou
 
 4. **`-ns 192.168.94.135`**
     - `-ns`: 사용할 DNS 서버 지정 옵션.
-    - `192.168.94.135`: DNS 서버의 IP 주소, 보통 도메인 컨트롤러.
+    - `192.168.94.135`: DNS 서버의 IP 주소, 보통 도메인 컨트롤러
+---
+# Blood Hound Python
+```bash
+bloodhound-python -u "hrapp-service" -p 'Untimed$Runny' -d hokkaido-aerospace.com -c all --zip -ns 192.168.208.40
+```
