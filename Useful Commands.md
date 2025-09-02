@@ -1,3 +1,9 @@
+# Squid Proxy
+```bash
+python3 spose.py --proxy http://10.10.11.131:3128 --target 10.10.11.131
+```
+- https://github.com/aancw/spose
+---
 # Windows Download Command
 ```powershell
 certutil -urlcache -f -split <target>
