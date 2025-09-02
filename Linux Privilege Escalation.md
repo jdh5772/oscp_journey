@@ -87,3 +87,7 @@ mkdir test
 
 cat /root/.ssh/id_rsa
 ```
+# sudo group
+```bash
+sudo su
+```
