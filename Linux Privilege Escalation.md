@@ -91,3 +91,6 @@ cat /root/.ssh/id_rsa
 ```bash
 sudo su
 ```
+# rpc.py
+- https://github.com/abersheeran/rpc.py
+- https://www.exploit-db.com/exploits/50983
