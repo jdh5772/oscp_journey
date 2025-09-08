@@ -163,7 +163,9 @@ a SELECT INBOX
 
 a SEARCH ALL
 
-a FETCH <NUMBER> ALL
+a fetch <NUMBER> body[header]
+
+a fetch <NUMBER> body[text]
 
 a LOGOUT
 ```
