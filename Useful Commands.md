@@ -42,6 +42,8 @@ i686-w64-mingw32-gcc 42341.c -o syncbreeze_exploit.exe -lws2_32
 # curl
 ```bash
 curl -L http://192.168.132.65
+
+curl -X POST -d '<data>'
 ```
 
 - `-L` : redirection
