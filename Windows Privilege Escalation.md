@@ -126,3 +126,6 @@ Restart-Service GammaService
 ```powershell
 schtasks /query /fo LIST /v
 ```
+---
+# Windows Privilege Escalation — Token Impersonation (SeImpersonatePrivilege)
+- https://usersince99.medium.com/windows-privilege-escalation-token-impersonation-seimpersonateprivilege-364b61017070
