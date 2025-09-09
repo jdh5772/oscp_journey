@@ -77,7 +77,7 @@ df -h
 - 현재 마운트된 파일시스템의 디스크 사용량을 사람이 읽기 쉬운 형태로 출력합니다.
 ```
 <img width="689" height="248" alt="image" src="https://github.com/user-attachments/assets/96e0cff6-b9f2-4624-9c36-417a71ddac0c" />
----
+
 ```bash
 debugfs /dev/sda3
 - 파일시스템의 내부 구조를 조작하거나 디버깅할 수 있는 저수준 파일시스템 디버거 실행
