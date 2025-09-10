@@ -203,3 +203,8 @@ cewl -d 5 -m 3 http://postfish.off/team.html -w /home/kali/Desktop/cewl.txt
 perl smtp-user-enum.pl -M VRFY -U /home/kali/Desktop/known-users -t 192.168.211.137
 ```
 ---
+# VNC(Virtual Network Computing)
+- 네트워크를 통해*다른 컴퓨터 화면을 공유하고 원격 제어할 수 있는 기술  
+```bash
+vncviewer 192.168.0.10:1
+```
