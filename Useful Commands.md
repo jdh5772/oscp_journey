@@ -203,6 +203,15 @@ cewl -d 5 -m 3 http://postfish.off/team.html -w /home/kali/Desktop/cewl.txt
 perl smtp-user-enum.pl -M VRFY -U /home/kali/Desktop/known-users -t 192.168.211.137
 ```
 ---
+# swaks(send mail tool)
+```bash
+swaks --server smtp.example.com \
+      --from me@example.com \
+      --to you@example.com \
+      --auth LOGIN --auth-user me@example.com --auth-password "비밀번호" \
+      --attach ./test.txt
+```
+---
 # VNC(Virtual Network Computing)
 - 네트워크를 통해*다른 컴퓨터 화면을 공유하고 원격 제어할 수 있는 기술  
 ```bash
