@@ -187,3 +187,10 @@ type C:\Windows\System32\mimilsa.log
 ```
 
 -   MemSSP로 캡처된 평문 자격 증명을 확인합니다.
+---
+# Cracking pdf password
+```bash
+pdf2john Infrastructure.pdf > pdf.hash
+
+john --wordlist=/usr/share/wordlists/rockyou.txt --rules=best64 pdf.hash
+```
