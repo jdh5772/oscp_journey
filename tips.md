@@ -85,6 +85,7 @@ C:/inetpub/logs/logfiles
 <img width="811" height="496" alt="image" src="https://github.com/user-attachments/assets/0426a9b3-32af-41ba-9bdf-e3585a712089" />
 
 - https://github.com/n0b0dyCN/RedisModules-ExecuteCommand
+- https://github.com/n0b0dyCN/redis-rogue-server
 ---
 # redis-cli
 ```bash
