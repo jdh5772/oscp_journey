@@ -217,3 +217,8 @@ swaks --server smtp.example.com \
 ```bash
 vncviewer 192.168.0.10:1
 ```
+---
+# scp
+```bash
+scp -O -i id_rsa authorized_keys max@$IP:/home/max/.ssh/authorized_keys
+```
