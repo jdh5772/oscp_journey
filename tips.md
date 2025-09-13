@@ -41,6 +41,7 @@ sudo nmap -Pn <ip>
 ---
 # FTP
 - `ls -al`로 숨겨진 파일 확인 가능.
+- 업로드가 가능한지 확인
 ---
 # Interesting File Path
 ```bash
