@@ -98,4 +98,5 @@ sudo su
 ---
 # makefile privesc
 <img width="706" height="636" alt="image" src="https://github.com/user-attachments/assets/553e10b6-f5d7-4494-b3da-94c3167651d4" />
+
 - https://medium.com/@adamforsythebartlett/makefile-privilege-escalation-oscp-62ea2c666d23
