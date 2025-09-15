@@ -92,3 +92,6 @@ C:/inetpub/logs/logfiles
 ```bash
 redis-cli -h <ip>
 ```
+---
+# SSH
+- authorized_keys를 변경할 수 있으면 변경
