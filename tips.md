@@ -98,3 +98,9 @@ redis-cli -h <ip>
 ---
 # Make ODT File
 - https://github.com/0bfxgh0st/MMG-LO
+---
+# glassfish important file location
+```bash
+glassfish4/glassfish/domains/domain1/config/admin-keyfile and
+glassfish4/glassfish/domains/domain1/config/local-password
+```
