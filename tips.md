@@ -95,3 +95,6 @@ redis-cli -h <ip>
 ---
 # SSH
 - authorized_keys를 변경할 수 있으면 변경
+---
+# Make ODT File
+- https://github.com/d3vn0mi/Morgans
