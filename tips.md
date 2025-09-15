@@ -96,7 +96,7 @@ redis-cli -h <ip>
 # SSH
 - authorized_keys를 변경할 수 있으면 변경
 ---
-# Make ODT File
+# Make ODT File(Libre Office)
 - https://github.com/0bfxgh0st/MMG-LO
 ---
 # glassfish important file location
