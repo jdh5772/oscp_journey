@@ -104,3 +104,6 @@ redis-cli -h <ip>
 glassfish4/glassfish/domains/domain1/config/admin-keyfile and
 glassfish4/glassfish/domains/domain1/config/local-password
 ```
+---
+# dosbox
+- GUI 상태에서 정상 작동
