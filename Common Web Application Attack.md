@@ -140,3 +140,13 @@ curl -X POST --data 'Archive=git%3B(dir%202%3E%261%20*%60%7Cecho%20CMD)%3B%26%3C
 # cat .htaccess
 AddType application/x-httpd-php .php16
 ```
+---
+# python web server
+```bash
+main.py
+app.py
+server.py
+run.py
+wsgi.py
+asgi.py
+```
