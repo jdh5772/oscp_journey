@@ -50,6 +50,7 @@ sudo nmap -Pn <ip>
 /etc/issue
 /etc/group
 /etc/hostname
+~/home/user/.bash_history
 
 /var/log/apache/access.log
 /var/log/apache2/access.log
