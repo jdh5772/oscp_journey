@@ -32,10 +32,14 @@ file exploit.djvu
 ```
 ---
 
-# 교차 컴파일
-
+# GCC
 ```bash
+# 교차 컴파일
 i686-w64-mingw32-gcc 42341.c -o syncbreeze_exploit.exe -lws2_32
+```
+```bash
+# 공유 라이브러리 만들기
+gcc -shared -fPIC ex.c -o ex.so
 ```
 
 ---
