@@ -53,6 +53,7 @@ sudo nmap -Pn <ip>
 /etc/hostname
 ~/home/user/.bash_history
 
+/etc/apache2/sites-enabled/000-default.conf
 /var/log/apache/access.log
 /var/log/apache2/access.log
 /var/log/httpd/access_log
