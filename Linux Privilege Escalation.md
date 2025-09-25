@@ -106,3 +106,6 @@ sudo su
 # nginx 서비스 유닛 내용 보기
 systemctl cat nginx.service
 ```
+---
+# 7z wild card exploit
+- https://chinnidiwakar.gitbook.io/githubimport/linux-unix/privilege-escalation/wildcards-spare-tricks
