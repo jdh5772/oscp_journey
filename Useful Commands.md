@@ -232,3 +232,14 @@ scp -O -i id_rsa authorized_keys max@$IP:/home/max/.ssh/authorized_keys
 ./ident-user-enum.pl 10.0.0.1 21 80 113 443
 export PATH=/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin
 ```
+---
+# gzip unzip
+```bash
+gzip -d <file>
+```
+---
+# tar
+```bash
+tar -cf target.tar foo bar
+tar -xf target.tar
+```
