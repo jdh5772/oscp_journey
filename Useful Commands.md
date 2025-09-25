@@ -227,8 +227,12 @@ vncviewer 192.168.0.10:1
 scp -O -i id_rsa authorized_keys max@$IP:/home/max/.ssh/authorized_keys
 ```
 ---
-# FreeBSD 
+# User Enumeration
 ```bash
 ./ident-user-enum.pl 10.0.0.1 21 80 113 443
+```
+---
+# FreeBSD 
+```bash
 export PATH=/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin
 ```
