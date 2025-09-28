@@ -140,3 +140,8 @@ services:
     tty: true
 ```
 - root2 유저 추가
+---
+# Windows 재시작
+```powershell
+shutdown /r /t 0
+```
