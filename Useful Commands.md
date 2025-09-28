@@ -213,7 +213,7 @@ swaks --server smtp.example.com \
       --from me@example.com \
       --to you@example.com \
       --auth LOGIN --auth-user me@example.com --auth-password "비밀번호" \
-      --attach ./test.txt
+      --attach @test.txt
 ```
 ---
 # VNC(Virtual Network Computing)
