@@ -146,3 +146,9 @@ net localgroup 'Remote Desktop Users' api /add
 ---
 # SeBackupPrivilege
 - https://www.hackingarticles.in/windows-privilege-escalation-sebackupprivilege
+---
+# PowerUp.ps1
+```powershell
+. .\PowerUp.ps1
+Invoke-AllChecks
+```
