@@ -19,7 +19,11 @@ socat TCP-LISTEN:2222,fork TCP:10.4.50.215:22
 ---
 # SSH Local Port Forwarding
 ```bash
+# 내부의 다른 컴퓨터(172.16.50.21)로 연결
 ssh -N -L 0.0.0.0:4455:172.16.50.217:445 database_admin@10.4.50.215
+
+# 내부 컴퓨터로 연결
+ssh -N -L 5901:localhost:5901 commander@192.168.121.55
 
 smbclient -p 4455 //192.168.50.63/scripts -U hr_admin --password=Welcome1234
 ```
