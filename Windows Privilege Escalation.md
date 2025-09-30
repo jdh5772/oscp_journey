@@ -152,3 +152,6 @@ net localgroup 'Remote Desktop Users' api /add
 . .\PowerUp.ps1
 Invoke-AllChecks
 ```
+---
+# priviledge escalation
+- https://github.com/gtworek/Priv2Admin
