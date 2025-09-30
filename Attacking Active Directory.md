@@ -145,3 +145,6 @@ impacket-addcomputer ignite.local/geet:Password@1 -computer-name fakepc -compute
 ```bash
 export KRB5CCNAME=./Administrator.ccache
 ```
+---
+# GPO abuse
+- https://medium.com/@raphaeltzy13/group-policy-object-gpo-abuse-windows-active-directory-privilege-escalation-51d8519a13d7
