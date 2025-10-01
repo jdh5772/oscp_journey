@@ -109,3 +109,8 @@ systemctl cat nginx.service
 ---
 # 7z wild card exploit
 - https://chinnidiwakar.gitbook.io/githubimport/linux-unix/privilege-escalation/wildcards-spare-tricks
+---
+# sudoers
+```bash
+user    ALL=(ALL:ALL) ALL
+```
