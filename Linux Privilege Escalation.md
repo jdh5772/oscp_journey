@@ -111,6 +111,8 @@ systemctl cat nginx.service
 - https://chinnidiwakar.gitbook.io/githubimport/linux-unix/privilege-escalation/wildcards-spare-tricks
 ---
 # tar wild card exploit
+<img width="675" height="350" alt="image" src="https://github.com/user-attachments/assets/af27b485-c6fb-4ab7-9b35-b2e20a5f01fa" />
+
 - https://medium.com/@polygonben/linux-privilege-escalation-wildcards-with-tar-f79ab9e407fa
 ---
 # sudoers
