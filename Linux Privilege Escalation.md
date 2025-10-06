@@ -119,3 +119,8 @@ systemctl cat nginx.service
 ```bash
 user    ALL=(ALL:ALL) ALL
 ```
+---
+# set setuid
+```bash
+chmod +s /bin/bash
+```
