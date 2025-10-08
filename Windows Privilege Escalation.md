@@ -164,5 +164,8 @@ rdesktop 192.168.81.165
 windows + u
 ```
 ---
+# SeManageVolume
+- https://hackfa.st/Offensive-Security/Windows-Environment/Privilege-Escalation/Token-Impersonation/SeManageVolumePrivilege/
+---
 # priviledge escalation
 - https://github.com/gtworek/Priv2Admin
