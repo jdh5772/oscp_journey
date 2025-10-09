@@ -59,7 +59,7 @@ wget http://ip/test.txt -O /tmp/test.txt
 ```
 
 - `-O` : 데이터 저장(대문자)
-- 혹여나 작동을 안할시 http://를 제외해볼것.
+- 혹여나 작동을 안할시 `http://`를 제외해볼것.
 
 ---
 # find
