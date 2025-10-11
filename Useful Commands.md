@@ -229,6 +229,7 @@ vncviewer 192.168.0.10:1
 ```bash
 scp -O -i id_rsa authorized_keys max@$IP:/home/max/.ssh/authorized_keys
 ```
+- `-O` 최신 scp에서는 SFTP프로토콜을 사용하는데 예전의 SCP프로토콜을 사용하도록 설정
 ---
 # FreeBSD 
 ```bash
