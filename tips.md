@@ -125,6 +125,11 @@ set PATH=%PATH%C:\Windows\System32;C:\Windows\System32\WindowsPowerShell\v1.0;
 export PATH=/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin
 ```
 ---
+# docker
+```bash
+docker images
+```
+---
 # docker-compose.yaml exploit
 ```bash
 #cat docker-compose.yaml
