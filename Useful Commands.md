@@ -260,3 +260,9 @@ ssh -i root -o IdentitiesOnly=true root@localhost
 ```
 `-o IdentitiesOnly=true`
 - 저장되어 있는 다른 키들을 같이 전송하기 때문에 해당하는 키만으로 인증하는 방법
+---
+# hydra
+```bash
+hydra -l admin -P /usr/share/wordlists/rockyou.txt -e nsr -f ftp://192.168.68.46
+```
+- `-e nsr`: null password / 아이디와 같은 비밀번호 / 거꾸로 뒤집어서 시도
