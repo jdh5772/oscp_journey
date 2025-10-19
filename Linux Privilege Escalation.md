@@ -5,6 +5,8 @@ cat /etc/issue
 cat /etc/os-release
 
 uname -a
+
+cat /etc/shadow
 ```
 ```bash
 # 프로세스 및 네트워크 상태 확인
