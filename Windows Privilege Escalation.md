@@ -104,6 +104,9 @@ wmic service get name,pathname |  findstr /i /v "C:\Windows\\" | findstr /i /v "
 - WMIC를 사용하여 서비스 이름(`name`)과 실행 파일 경로(`pathname`)를 조회.
 - C:\windows\\ 경로 제외한뒤 "가 포함된 경로 제외
 
+sc qc VeyonService
+- 권한 확인
+
 Start-Service GammaService
 
 Stop-Service GammaService
