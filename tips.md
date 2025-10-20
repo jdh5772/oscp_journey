@@ -150,3 +150,6 @@ services:
 ```powershell
 shutdown /r /t 0
 ```
+---
+# Rogue Mysql Server
+- https://github.com/allyshka/Rogue-MySql-Server
