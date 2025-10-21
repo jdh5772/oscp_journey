@@ -5,9 +5,6 @@ findstr /SIM /C:"pass" *.txt *.pdf *.xls *.xlsx *.doc *.docx *kdbx,*ini *.xml *.
 - `/I`: **대소문자를 구분하지 않고** 검색
 - `/M`: 문자열이 포함된 **파일 이름만 출력**
 
-```bash
-xampp
-```
 ---
 ```powershell
 Get-LocalUser
@@ -172,3 +169,6 @@ windows + u
 ---
 # priviledge escalation
 - https://github.com/gtworek/Priv2Admin
+---
+# xampp
+- `C:\xampp\properties.ini` : xampp 설정파일
