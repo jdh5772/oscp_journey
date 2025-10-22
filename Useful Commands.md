@@ -270,3 +270,8 @@ ssh -i root -o IdentitiesOnly=true root@localhost
 hydra -l admin -P /usr/share/wordlists/rockyou.txt -e nsr -f ftp://192.168.68.46
 ```
 - `-e nsr`: null password / 아이디와 같은 비밀번호 / 거꾸로 뒤집어서 시도
+---
+# lsof
+```bash
+sudo lsof -i :8080
+```
