@@ -1,3 +1,6 @@
+- `tunnerling`: 데이터를 보낼 수 있는 통로를 만들어 냄
+- `port forwarding`: 그 통로를 통해서 어떤 포트를 연결할지 정함
+---
 ```bash
 ip addr
 # 네트워크 인터페이스의 IP 주소 확인
