@@ -18,7 +18,7 @@ login with master password
 ```
 ---
 # Keepass Dump file Cracking
-```
+```bash
 python3 poc.py <file.dmp>
 
 # sudo apt install keepassxc
