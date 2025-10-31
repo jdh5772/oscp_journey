@@ -277,3 +277,9 @@ hydra -l admin -P /usr/share/wordlists/rockyou.txt -e nsr -f ftp://192.168.68.46
 ```bash
 sudo lsof -i :8080
 ```
+---
+# vim
+```bash
+:%s/D  .*//g
+```
+- `.*` : 뒤에 모든 문자 선택
