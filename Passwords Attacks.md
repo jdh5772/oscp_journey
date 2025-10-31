@@ -16,7 +16,15 @@ hashcat -m 13400 keepass.hash /usr/share/wordlists/rockyou.txt -r /usr/share/has
 ```
 login with master password
 ```
+---
+# Keepass Dump file Cracking
+```
+python3 poc.py <file.dmp>
 
+# sudo apt install keepassxc
+keepassxc <file.kdbx>
+```
+- https://github.com/matro7sh/keepass-dump-masterkey
 ---
  
 # SSH Private Key Passphrase Cracking
