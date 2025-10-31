@@ -7,7 +7,10 @@
 - 사이트 제목 및 내용 확인
 
 - `/var/mail`에 있는 내용 확인
+  
 - github에서 `"$pass"`로 pass 변수 찾기
+
+- javascript 코드 확인
 ---
 # windows ssh file location
 ```powershell
