@@ -2,7 +2,7 @@
 - password : PBKDF2-HMAC-SHA256
 - https://github.com/jas502n/Grafana-CVE-2021-43798
 ---
-# PRTG
+# PRTG(< 18.2.39 Command Injection Vulnerability)
 - https://codewatch.org/2018/06/25/prtg-18-2-39-command-injection-vulnerability/
 ---
 # Apache Tomcat
