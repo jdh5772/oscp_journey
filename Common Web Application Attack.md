@@ -1,3 +1,7 @@
+# war file
+- war : webapplication archive
+- Java Archives (.jar), Java Server Pages (.jsp), Java Servlets, Java classes, webpages, css 등이 압축되어 있는 파일.
+---
 # Bypass WAF
 `X-Forwarded-For: 127.0.0.1`
 
