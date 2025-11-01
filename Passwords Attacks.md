@@ -209,3 +209,9 @@ puttygen <file.ppk> -O private-openssh -o <file.pem>
 
 ssh -i <file.pem> host@local
 ```
+---
+# cpassword(groups.xml)
+```bash
+# pip install gpp-decrypt
+gpp-decrypt -f <file>
+```
