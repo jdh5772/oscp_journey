@@ -183,6 +183,7 @@ sc.exe stop VMTools
 
 sc.exe start VMTools
 ```
+- https://www.hackingarticles.in/windows-privilege-escalation-server-operator-group/
 ---
 # priviledge escalation
 - https://github.com/gtworek/Priv2Admin
