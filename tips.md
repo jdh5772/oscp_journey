@@ -1,3 +1,8 @@
+# linux white space 
+```bash
+${IFS}
+```
+---
 - `config` 파일을 먼저 `find`로 모두 찾아본 뒤에 패스워드 혹은 해시가 적혀 있는지 확인
 
 - password reuse
