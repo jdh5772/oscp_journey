@@ -1,3 +1,8 @@
+# grep
+```bash
+grep -r . 2>/dev/null
+```
+---
 # Squid Proxy
 ```bash
 python3 spose.py --proxy http://10.10.11.131:3128 --target 10.10.11.131
