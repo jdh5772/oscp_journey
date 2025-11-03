@@ -1,3 +1,7 @@
+# MOSH(mobile shell)
+<img width="602" height="216" alt="image" src="https://github.com/user-attachments/assets/f1471976-9b5c-49d0-9416-ce866a768be1" />
+
+---
 # linux white space 
 ```bash
 ${IFS}
