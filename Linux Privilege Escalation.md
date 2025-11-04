@@ -7,6 +7,8 @@ cat /etc/os-release
 uname -a
 
 cat /etc/shadow
+
+cat /proc/self/cmdline
 ```
 ```bash
 # 프로세스 및 네트워크 상태 확인
