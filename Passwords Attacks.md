@@ -213,5 +213,5 @@ ssh -i <file.pem> host@local
 # cpassword(groups.xml)
 ```bash
 # pip install gpp-decrypt
-gpp-decrypt -f <file>
+gpp-decrypt -f groups.xml
 ```
