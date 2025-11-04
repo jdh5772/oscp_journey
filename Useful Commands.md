@@ -1,3 +1,8 @@
+# smbmap
+```bash
+smbmap -u '' -p '' -H <ip> -r -depth 5
+```
+---
 # grep
 ```bash
 grep -r . 2>/dev/null
