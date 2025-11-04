@@ -60,7 +60,7 @@ sudo impacket-GetUserSPNs -request -dc-ip 192.168.50.70 corp.com/pete
 -   **corp.com/pete** : 인증에 사용할 도메인/사용자.
 
 ```bash
-impacket-GetUsersSPNs -request -dc-ip <ip> <domain>/<user>
+impacket-GetUsersSPNs -request -dc-ip <ip> <domain>/<user> -no-pass
 ```
 ---
 # Kerberos SessionError: KRB_AP_ERR_SKEW(Clock skew too great)
