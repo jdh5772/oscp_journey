@@ -1,3 +1,8 @@
+# jenkins
+- initial password : `<home directory>/secrets/initialAdminPassword`
+- user accounts: `<home directory>/users/users.xml`
+- user config file : `<home directory>/users/<user>/config.xml`
+---
 # grafana
 - password : PBKDF2-HMAC-SHA256
 - https://github.com/jas502n/Grafana-CVE-2021-43798
