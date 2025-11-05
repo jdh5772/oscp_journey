@@ -1,3 +1,9 @@
+# icacls
+```powershell
+icacls root.txt /grant alfred:F
+```
+- root.txt에 alfred에게 Full 권한을 줌.
+---
 ```powershell
 findstr /SIM /C:"pass" *.txt *.pdf *.xls *.xlsx *.doc *.docx *kdbx,*ini *.xml *.cfg *.config
 ```
