@@ -1,6 +1,6 @@
 # smbmap
 ```bash
-smbmap -u '' -p '' -H <ip> -r -depth 5
+smbmap -u '' -p '' -H <ip> -r --depth 5
 ```
 ---
 # grep
