@@ -77,8 +77,9 @@ hashcat -m 1000 nelly.hash /usr/share/wordlists/rockyou.txt -r /usr/share/hashca
 ---
 # Cracking Net-NTLMv2
 ``` bash
-sudo responder -I tap0
+sudo responder -I tap0 -v
 ```
+- `-v` : 이전에 캡쳐링 된 해시 다시 캡쳐링 하도록 도와줌.
 
 -   Responder는 NTLM 인증 요청을 가로채서 해시를 수집하는
     도구입니다.
