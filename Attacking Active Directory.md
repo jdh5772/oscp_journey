@@ -5,6 +5,11 @@ netexec smb [ip] -u guest -p '' --rid-brute
 ./enum4linux <ip>
 ```
 ---
+# SMB
+```bash
+netexec smb <domain> -u <id> -p <password> --users
+```
+---
 # Impacket secretsdump
 ```bash
 impacket-secretsdump -ntds ntds.dit -system SYSTEM LOCAL
