@@ -1,3 +1,7 @@
+# IDOR(Insecure Direct Object Reference)
+- 사용자가 URL, 매개변수 등을 통해 직접 조작할 수 있을 때 발생하는 보안 취약점
+- `http://<url>/account?id=123` -> `http://<url>/account?id=124`
+---
 # war file
 - war : webapplication archive
 - Java Archives (.jar), Java Server Pages (.jsp), Java Servlets, Java classes, webpages, css 등이 압축되어 있는 파일.
