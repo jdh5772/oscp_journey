@@ -8,6 +8,7 @@
 - https://github.com/jas502n/Grafana-CVE-2021-43798
 ---
 # PRTG(< 18.2.39 Command Injection Vulnerability)
+- config file location : `/programdata/Paessler/PRTG Network Monitor`
 - https://codewatch.org/2018/06/25/prtg-18-2-39-command-injection-vulnerability/
 
 - `the argument supplied in the “Parameter” field of the “Notifications” configuration is passed directly into the PowerShell script without any sanitization, resulting in the ability into inject any other PowerShell code.`
