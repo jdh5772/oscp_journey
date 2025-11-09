@@ -2,6 +2,8 @@
 ```bash
 pfx2john filename > hash
 john hash
+
+openssl pkcs12 -in <pfx file> -nocerts -nodes -out key.pem
 ```
 ---
 # hydra
