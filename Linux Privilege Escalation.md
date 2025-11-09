@@ -1,3 +1,17 @@
+# add new root user
+```bash
+# to generate hash of the password
+openssl passwd mrcake
+hKLD3431415ZE
+
+# to create a second root user with "mrcake" password
+echo "root2:WVLY0mgH0RtUI:0:0:root:/root:/bin/bash" >> /etc/passwd
+
+# to switch to a root2
+su root2
+Password: mrcake 
+```
+---
 ```bash
 # OS정보 확인
 cat /etc/issue
