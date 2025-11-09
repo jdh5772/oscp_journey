@@ -1,3 +1,6 @@
+# mantis
+- https://mantisbt.org/bugs/view.php?id=23173
+---
 # jenkins
 - initial password : `<home directory>/secrets/initialAdminPassword`
 - user accounts: `<home directory>/users/users.xml`
