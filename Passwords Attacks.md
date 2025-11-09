@@ -3,9 +3,12 @@
 pfx2john filename > hash
 john hash
 
-openssl pkcs12 -in <pfx file> -nocerts -nodes -out key.pem
+openssl pkcs12 -in <pfx file> -nocerts -nodes -out private.key
+openssl pkcs12 -in <pfx file> -nokeys -clcerts -out public.key
 
 ssh -i <file.pem> host@local
+
+evil-winrm -i <ip> -c <public key> -k <private key> -S 
 ```
 ---
 # hydra
