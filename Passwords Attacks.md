@@ -4,6 +4,8 @@ pfx2john filename > hash
 john hash
 
 openssl pkcs12 -in <pfx file> -nocerts -nodes -out key.pem
+
+ssh -i <file.pem> host@local
 ```
 ---
 # hydra
