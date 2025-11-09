@@ -1,4 +1,4 @@
-# mantis
+# mantis(through 2.5.2 on MySQL/MariaDB)
 - https://mantisbt.org/bugs/view.php?id=23173
 ---
 # jenkins
