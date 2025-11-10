@@ -224,7 +224,7 @@ pdf2john Infrastructure.pdf > pdf.hash
 john --wordlist=/usr/share/wordlists/rockyou.txt --rules=best64 pdf.hash
 ```
 ---
-# PPK to PEM
+# PPK(Putty Private Key File) to PEM
 ```bash
 puttygen <file.ppk> -O private-openssh -o <file.pem>
 
