@@ -1,3 +1,10 @@
+# powershell history
+```powershell
+Get-History
+
+(Get-PSReadlineOption).HistorySavePath
+```
+---
 # icacls
 ```powershell
 icacls root.txt /grant alfred:F
@@ -45,11 +52,6 @@ Get-ChildItem -Path C:\ `
 ```powershell
 runas /user:backupadmin cmd
 - 'backupadmin' 계정으로 명령 프롬프트(cmd)를 실행합니다. 해당 계정의 비밀번호 입력이 필요합니다.
-```
-```powershell
-Get-History
-
-(Get-PSReadlineOption).HistorySavePath
 ```
 ```powershell
 Get-CimInstance -ClassName win32_service | Select Name,State,PathName | Where-Object {$_.State -like 'Running'}
