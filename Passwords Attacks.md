@@ -1,3 +1,11 @@
+# base64
+- `A-Z`, `a-z`, `0-9`, `+,/,=`만 쓰인다.
+- 문자열의 길이가 4의 배수로 끝난다.
+```bash
+# 줄바꿈 포함하지 않아야 함.
+echo -n <base64 encoded> |wc -c
+```
+---
 # pfx
 ```bash
 pfx2john filename > hash
