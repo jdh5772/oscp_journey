@@ -1,3 +1,10 @@
+# reaver
+```bash
+reaver -i <monitor mode interface> -b <target's MAC adress> -vv
+```
+- WPS(Wi-Fi Protected Setup)의 PIN을 이용해 무선 라우터의 WPS 인증을 브루트포스(무차별 대입) 하려는 도구
+- 성공하면 라우터의 WPS PIN을 얻고 그로부터 WPA/WPA2 프리-쉐어드키(비밀번호)를 획득
+---
 # smbmap
 ```bash
 smbmap -u '' -p '' -H <ip> -r --depth 5
