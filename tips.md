@@ -77,6 +77,10 @@ sudo nmap --scrip vuln <ip>
 sudo nmap -Pn <ip>
 ```
 - ping 테스트가 안되더라도 서버가 열려있을 수 있으니 확인
+
+```bash
+sudo nmap -sn 192.168.1.0/24
+```
 ---
 # FTP
 - `ls -al`로 숨겨진 파일 확인 가능.
