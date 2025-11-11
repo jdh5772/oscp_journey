@@ -30,6 +30,7 @@ ps aux
 
 ifconfig
 
+# 무선 네트워크 인터페이스(wireless interface) 정보와 설정을 확인
 iw dev
 
 routel
