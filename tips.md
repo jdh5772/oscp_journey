@@ -1,3 +1,19 @@
+- AD라고 해서 꼭 AD만으로 풀려고 하면 안풀리는 경우가 있다 !
+
+- `config` 파일을 먼저 `find`로 모두 찾아본 뒤에 패스워드 혹은 해시가 적혀 있는지 확인
+
+- password reuse
+
+- `curl` 헤더 확인
+
+- 사이트 제목 및 내용 확인
+
+- `/var/mail`에 있는 내용 확인
+  
+- github에서 `"$pass"`로 pass 변수 찾기
+
+- page source code 확인
+---
 # Ruby YAML.load exploit
 ```bash
 # cat ex.yaml
@@ -31,20 +47,6 @@
 ```bash
 ${IFS}
 ```
----
-- `config` 파일을 먼저 `find`로 모두 찾아본 뒤에 패스워드 혹은 해시가 적혀 있는지 확인
-
-- password reuse
-
-- `curl` 헤더 확인
-
-- 사이트 제목 및 내용 확인
-
-- `/var/mail`에 있는 내용 확인
-  
-- github에서 `"$pass"`로 pass 변수 찾기
-
-- javascript 코드 확인
 ---
 # windows ssh file location
 ```powershell
