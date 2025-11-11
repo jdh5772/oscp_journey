@@ -30,6 +30,8 @@ ps aux
 
 ifconfig
 
+iw dev
+
 routel
 
 ss -anp
