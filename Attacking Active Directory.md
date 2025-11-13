@@ -160,6 +160,7 @@ bloodhound-python -u "hrapp-service" -p 'Untimed$Runny' -d hokkaido-aerospace.co
 ---
 # rusthound
 ```bash
+sudo ntpdate <ip>
 rusthound-ce -d <domain> -u <user> -p <password>
 ```
 ---
