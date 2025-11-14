@@ -1,4 +1,5 @@
 # mantis(through 2.5.2 on MySQL/MariaDB)
+- config file location : `/var/www/config/config_inc.php`
 - https://mantisbt.org/bugs/view.php?id=23173
 ---
 # jenkins
