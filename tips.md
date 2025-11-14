@@ -28,12 +28,6 @@
 # MOSH(mobile shell)
 <img width="602" height="216" alt="image" src="https://github.com/user-attachments/assets/f1471976-9b5c-49d0-9416-ce866a768be1" />
 
-
----
-# windows ssh file location
-```powershell
-C:\Users\<Username>\.ssh
-```
 ---
 # FTP
 - `ls -al`로 숨겨진 파일 확인 가능.
@@ -59,9 +53,6 @@ python3 ntlm_theft.py -g lnk -s <ip> -f vault
 - https://github.com/Greenwolf/ntlm_theft
 ---
 # Path variables
-```powershell
-set PATH=%PATH%C:\Windows\System32;C:\Windows\System32\WindowsPowerShell\v1.0;
-```
 ```bash
 export PATH=/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin
 ```
@@ -81,11 +72,6 @@ services:
     tty: true
 ```
 - root2 유저 추가
----
-# Windows 재시작
-```powershell
-shutdown /r /t 0
-```
 ---
 # Python SSL requests error
 - `verify=False`를 요청에다가 추가해주기
