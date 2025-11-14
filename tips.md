@@ -72,6 +72,3 @@ services:
     tty: true
 ```
 - root2 유저 추가
----
-# Python SSL requests error
-- `verify=False`를 요청에다가 추가해주기
