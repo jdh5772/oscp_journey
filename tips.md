@@ -29,11 +29,6 @@
 <img width="602" height="216" alt="image" src="https://github.com/user-attachments/assets/f1471976-9b5c-49d0-9416-ce866a768be1" />
 
 ---
-# FTP
-- `ls -al`로 숨겨진 파일 확인 가능.
-- dir 안될 때 `passive` 입력해서 만들어주기.
-- 업로드가 가능한지 확인
----
 # Make ODT File(Libre Office)
 - https://github.com/0bfxgh0st/MMG-LO
 ---
