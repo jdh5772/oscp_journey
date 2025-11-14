@@ -210,6 +210,7 @@ net localgroup 'Remote Desktop Users' api /add
 reg query HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Installer
 reg query HKLM\Software\Policies\Microsoft\Windows\Installer
 ```
+<img width="1534" height="706" alt="image" src="https://github.com/user-attachments/assets/a70d541f-eb2a-4067-8af6-9a97ecc0d0c8" />
 
 ### MSI 패키지 생성 및 실행
 ```bash
