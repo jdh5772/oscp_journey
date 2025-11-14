@@ -196,8 +196,5 @@ services:
 shutdown /r /t 0
 ```
 ---
-# Rogue Mysql Server
-- https://github.com/allyshka/Rogue-MySql-Server
----
 # Python SSL requests error
 - `verify=False`를 요청에다가 추가해주기
