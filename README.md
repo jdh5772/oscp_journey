@@ -1,6 +1,6 @@
-# OSCP Journey - Reorganized (v2)
+# OSCP Journey
 
-A collection of OSCP commands and techniques tailored to my taste - **Reorganized Edition (No Images)**
+A collection of OSCP commands and techniques tailored to my taste
 
 ## 📚 Contents
 
@@ -81,22 +81,3 @@ A collection of OSCP commands and techniques tailored to my taste - **Reorganize
 ## ⚠️ Disclaimer
 
 이 자료는 **교육 목적**으로만 사용되어야 합니다. 승인받지 않은 시스템에 대한 공격은 불법입니다.
-
-## 📝 Notes
-
-- ✅ 모든 원본 텍스트 내용이 100% 보존되어 있습니다
-- ✅ 이미지는 제외되었습니다
-- ✅ 내용이 중복되었던 부분은 적절한 카테고리로 재분류되었습니다
-- ✅ 30년 경력의 보안 전문가 관점에서 논리적으로 구조화되었습니다
-- ✅ 한 글자도 삭제되지 않았습니다 (이미지 태그 제외)
-
-## 🔍 Verification
-
-이 문서는 2번의 엄격한 검증을 거쳤습니다:
-1. **1차 체크**: 모든 파일 생성 시 원본 내용 확인
-2. **2차 체크**: 최종 검증 단계에서 모든 명령어, 코드, 텍스트 보존 확인
-
----
-
-**Version**: 2.0 (Reorganized - No Images)  
-**Last Updated**: 2025
