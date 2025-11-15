@@ -1,4 +1,0 @@
-# Path variables
-```bash
-export PATH=/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin
-```
