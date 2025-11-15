@@ -12,12 +12,6 @@ Remove-Item -Path "C:\Path\To\YourFile.txt"
 cewl -d 5 -m 3 http://postfish.off/team.html -w /home/kali/Desktop/cewl.txt
 ```
 ---
-# FreeBSD 
-```bash
-./ident-user-enum.pl 10.0.0.1 21 80 113 443
-export PATH=/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin
-```
----
 # ldd
 ```bash
 ldd /usr/bin/log-sweeper
@@ -30,9 +24,3 @@ ssh -i root -o IdentitiesOnly=true root@localhost
 ```
 `-o IdentitiesOnly=true`
 - 저장되어 있는 다른 키들을 같이 전송하기 때문에 해당하는 키만으로 인증하는 방법
----
-# vim
-```bash
-:%s/D  .*//g
-```
-- `.*` : 뒤에 모든 문자 선택
