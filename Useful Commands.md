@@ -1,8 +1,3 @@
-# cewl(Custom Word List generator)
-```bash
-cewl -d 5 -m 3 http://postfish.off/team.html -w /home/kali/Desktop/cewl.txt
-```
----
 # ldd
 ```bash
 ldd /usr/bin/log-sweeper
