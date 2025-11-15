@@ -35,6 +35,14 @@ ls -al  # 숨겨진 파일 확인 가능
 passive # dir 안될 때 입력해서 만들어주기
 ```
 - 업로드가 가능한지 확인
+---
+
+## CeWL (Custom Word List Generator)
+```bash
+cewl -d 5 -m 3 http://postfish.off/team.html -w /home/kali/Desktop/cewl.txt
+```
+- 웹사이트에서 단어를 수집하여 커스텀 워드리스트 생성
+
 
 ---
 
