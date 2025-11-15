@@ -252,11 +252,3 @@ ssh -i <file.pem> host@local
 # pip install gpp-decrypt
 gpp-decrypt -f groups.xml
 ```
-
----
-
-## CeWL (Custom Word List Generator)
-```bash
-cewl -d 5 -m 3 http://postfish.off/team.html -w /home/kali/Desktop/cewl.txt
-```
-- 웹사이트에서 단어를 수집하여 커스텀 워드리스트 생성
