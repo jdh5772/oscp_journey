@@ -1,3 +1,28 @@
+# Ligolo-Ng
+```bash
+# server
+ip tuntap add user root mode tun ligolo
+ip link set ligolo up
+tar -xvzf ligolo-ng_proxy_0.5.1_linux_amd64.tar.gz
+./proxy -selfcert
+```
+```powershell
+# client
+./agent.exe -connect <rhost>:11601 -ignore-cert
+```
+```bash
+# ligolo-ng
+session
+```
+```bash
+ip route add 192.168.148.0/24 dev ligolo #internal IP
+ip route list
+```
+```bash
+# ligolo-ng
+start
+```
+---
 # Network Tunneling and Pivoting
 - 연결하는 컴퓨터들이 같은 chisel의 버전을 사용해야 한다!
 
