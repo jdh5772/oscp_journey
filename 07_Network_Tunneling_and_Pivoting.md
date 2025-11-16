@@ -1,4 +1,5 @@
 # Network Tunneling and Pivoting
+- 연결하는 컴퓨터들이 같은 chisel의 버전을 사용해야 한다!
 
 ## 개념
 - `tunneling`: 데이터를 보낼 수 있는 통로를 만들어 냄
