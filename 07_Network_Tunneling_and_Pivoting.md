@@ -1,10 +1,10 @@
 # Ligolo-Ng
 ```bash
 # server
-ip tuntap add user root mode tun ligolo
-ip link set ligolo up
+sudo ip tuntap add user root mode tun ligolo
+sudo ip link set ligolo up
 tar -xvzf ligolo-ng_proxy_0.5.1_linux_amd64.tar.gz
-./proxy -selfcert
+sudo ./proxy -selfcert
 ```
 ```powershell
 # client
