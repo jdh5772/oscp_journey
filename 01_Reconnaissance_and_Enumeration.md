@@ -11,7 +11,9 @@ sudo nmap --script vuln <ip>
 # /etc/hosts에 등록하고 난 뒤에 nmap 한번 더 실행해주기
 sudo nmap <ip>
 
+# -Pn : Ping 테스트를 무시하고 스캔
 # Ping 테스트가 안되더라도 서버가 열려있을 수 있음
+# proxychains를 걸면 Ping 테스트 안됨.
 sudo nmap -Pn <ip>
 
 # 네트워크 스캔
