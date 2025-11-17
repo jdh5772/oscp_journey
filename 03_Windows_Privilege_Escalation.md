@@ -1,5 +1,9 @@
 # Windows Privilege Escalation
-
+## findstr
+```powershelll
+type <file> | findstr 'NTLM'
+```
+---
 ## Winlogon 설정값 조회
 ```powershell
 reg.exe query "HKLM\software\microsoft\windows nt\currentversion\winlogon"
