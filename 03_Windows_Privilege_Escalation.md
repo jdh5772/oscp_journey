@@ -50,6 +50,7 @@ systeminfo
 ipconfig /all
 route print
 netstat -ano
+services
 ```
 
 ```powershell
