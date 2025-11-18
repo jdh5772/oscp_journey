@@ -245,6 +245,11 @@ msiexec /quiet /qn /i ignite.msi
 ---
 
 ## SeBackupPrivilege
+### base file location
+```powershell
+C:\windows\system32\SAM
+C:\windows\system32\SYSTEM
+```
 
 ### SAM 및 SYSTEM 레지스트리 덤프
 ```powershell
