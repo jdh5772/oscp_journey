@@ -17,6 +17,17 @@ Get-History
 
 (Get-PSReadlineOption).HistorySavePath
 ```
+```powershell
+# 일반적인 경로
+$historyPath = "$env:APPDATA\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt"
+$historyPath
+
+# 파일이 존재하는지 확인
+Test-Path $historyPath
+
+# 히스토리 내용 보기
+Get-Content $historyPath
+```
 
 ---
 
