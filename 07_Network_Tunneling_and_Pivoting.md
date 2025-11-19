@@ -15,6 +15,9 @@ sudo ./proxy -selfcert
 ifconfig
 
 session
+
+# 내부망에서 외부망으로 패킷 전달
+listener_add --addr <tunneling ip>:8888 --to <lhost>:80
 ```
 ```bash
 ip route add 192.168.148.0/24 dev ligolo #internal IP
