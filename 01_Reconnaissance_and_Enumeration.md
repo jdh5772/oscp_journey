@@ -25,7 +25,14 @@ sudo nmap -sn 192.168.1.0/24
 - 네트워크 장비(라우터, 스위치, 서버, 프린터 등)를 관리 및 모니터링하기 위한 표준 프로토콜
 
 ```bash
-snmp-check <ip>
+# 한번만 하면 영구적.
+sudo apt install snmp-mibs-downloader
+download-mibs
+
+# "mibs :" 주석처리
+sudo vi /etc/snmp/snmp.conf
+
+snmpbulkwalk -c public -v2c 10.10.10.10 . > result
 ```
 
 ---
