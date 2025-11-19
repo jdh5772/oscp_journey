@@ -33,6 +33,9 @@ download-mibs
 sudo vi /etc/snmp/snmp.conf
 
 snmpbulkwalk -c public -v2c 10.10.10.10 . > result
+
+# EXTEND-MIB : 관리자가 의도적으로 노출시킨 정보
+cat result | grep NET-SNMP-EXTEND-MIB
 ```
 
 ---
