@@ -1,5 +1,9 @@
 # Scripting and Development
-
+## URL encoding
+```bash
+echo -n <text> |jq -sRr @uri
+```
+---
 ## Bash Script
 
 ### basename
