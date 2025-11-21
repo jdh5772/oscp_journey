@@ -18,12 +18,6 @@ reg.exe query "HKLM\software\microsoft\windows nt\currentversion\winlogon"
 
 ## PowerShell History
 ```powershell
-Get-History
-
-(Get-PSReadlineOption).HistorySavePath
-```
-```powershell
-# 일반적인 경로
 $historyPath = "$env:APPDATA\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt"
 $historyPath
 
