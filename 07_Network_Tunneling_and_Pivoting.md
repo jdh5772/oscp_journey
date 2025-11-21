@@ -17,7 +17,7 @@ ifconfig
 session
 
 # 내부망에서 외부망으로 패킷 전달
-listener_add --addr <tunneling ip>:8888 --to <lhost>:80
+listener_add --addr 0.0.0.0:8888 --to <lhost>:80
 ```
 ```bash
 # 터널링 된 ip로 연결하면 외부망으로 연결 됨.
