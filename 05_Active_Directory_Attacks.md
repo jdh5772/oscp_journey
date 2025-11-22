@@ -1,4 +1,10 @@
 # Attacking Active Directory
+## POST EXPLOITATION
+- powershell history
+- sam, system dump and cracking
+- mimikatz
+- powerup.ps1
+- winpeas
 
 ## SMB Enumeration
 ```bash
