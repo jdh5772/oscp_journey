@@ -5,6 +5,7 @@
 - mimikatz
 - powerup.ps1
 - winpeas
+- 내부 파일 체크
 
 ## SMB Enumeration
 ```bash
