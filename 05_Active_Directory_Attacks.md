@@ -5,7 +5,7 @@
 - mimikatz
 - powerup.ps1
 - winpeas
-- 내부 파일 체크(Documents,C:\에 생성된 폴더)
+- 내부 파일 체크(Documents,C:\에 생성된 폴더,유저들 내부 등 꼼꼼하게 체크 !) 
 - DC가 아니면 `--local-auth`를 사용해서 로그인 시도
 
 ## SMB Enumeration
