@@ -6,6 +6,7 @@
 - powerup.ps1
 - winpeas
 - 내부 파일 체크
+- DC가 아니면 `--local-auth`를 사용해서 로그인 시도
 
 ## SMB Enumeration
 ```bash
