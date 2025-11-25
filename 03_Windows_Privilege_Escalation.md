@@ -157,6 +157,9 @@ sc qc VeyonService
 Start-Service GammaService
 Stop-Service GammaService
 
+sc.exe start GammaService
+sc.exe stop GammaService
+
 # 디렉토리 권한 확인
 icacls "C:\Program Files\Enterprise Apps"
 ```
