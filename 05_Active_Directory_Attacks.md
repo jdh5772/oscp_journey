@@ -41,6 +41,8 @@ invoke-allchecks
 - 내부 파일 체크(Documents,C:\에 생성된 폴더,유저들 내부 등 꼼꼼하게 체크 !) 
 - netexec에서 오류가 나오면 `--local-auth`를 사용해서 로그인 시도
 - netexec smb를 통해서 psexec를 사용하여 셸을 얻을 수 있음.
+- `[-] domain.com\user:wrongpass - Login Failed` : 비밀번호가 틀린 것!
+- `[-] domain.com\user:password - Account Locked Out` : 너무 많은 시도로 계정이 잠긴 것!
 
 
 
