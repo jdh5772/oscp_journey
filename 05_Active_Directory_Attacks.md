@@ -43,6 +43,7 @@ invoke-allchecks
 - netexec smb를 통해서 psexec를 사용하여 셸을 얻을 수 있음.
 - `[-] domain.com\user:wrongpass - Login Failed` : 비밀번호가 틀린 것!
 - `[-] domain.com\user:password - Account Locked Out` : 너무 많은 시도로 계정이 잠긴 것!
+- `nxc smb 192.168.1.0/24 -u UserNAme -p 'PASSWORDHERE' --pass-pol` : 패스워드 스프레잉 하기 전에 체크
 
 
 
