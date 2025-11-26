@@ -103,6 +103,13 @@ Get-Service | Where-Object {$_.Status -eq "Running"} > service.txt
 
 # cmd
 sc query > service.txt
+
+# 서비스 시작/중지
+Start-Service GammaService
+Stop-Service GammaService
+
+sc.exe start GammaService
+sc.exe stop GammaService
 ```
 
 ### C 코드로 악성 실행 파일 생성
