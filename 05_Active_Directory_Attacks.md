@@ -45,7 +45,14 @@ invoke-allchecks
 - `[-] domain.com\user:password - Account Locked Out` : 너무 많은 시도로 계정이 잠긴 것!
 - `nxc smb 192.168.1.0/24 -u UserNAme -p 'PASSWORDHERE' --pass-pol` : 패스워드 스프레잉 하기 전에 체크
 
-
+---
+## whoami
+```powershell
+whoami
+# DOMAIN\username : 도메인 계정
+# COMPUTERNAME\username : 로컬 계정
+```
+---
 
 
 ## SMB Enumeration
