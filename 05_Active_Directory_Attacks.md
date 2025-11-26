@@ -46,11 +46,16 @@ invoke-allchecks
 - `nxc smb 192.168.1.0/24 -u UserNAme -p 'PASSWORDHERE' --pass-pol` : 패스워드 스프레잉 하기 전에 체크
 
 ---
-## whoami
+## Users and Groups enumeration
 ```powershell
 whoami
 # DOMAIN\username : 도메인 계정
 # COMPUTERNAME\username : 로컬 계정
+
+net user <user>
+ner user <user> /domain
+net group <group>
+net group <group> /domain
 ```
 ---
 
