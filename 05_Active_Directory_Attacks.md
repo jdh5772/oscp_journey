@@ -2,7 +2,7 @@
 ## POST EXPLOITATION
 - 모든 내용을 꼼꼼하게 살펴봐야 한다!
 - `evil-winrm`에 로그인 상태에서는 실행을 시키지 못하는 프로그램들이 있을 수 있으니 다른 방법으로 로그인 해서 시도.
-- users 수집
+- users 수집(C:\Users)
 - powershell history
 
 ```powershell
