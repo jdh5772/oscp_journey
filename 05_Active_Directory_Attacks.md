@@ -209,6 +209,8 @@ mimikatz # kerberos::list
 
 # 4. 접근 테스트
 dir \\DC01\C$
+
+klist
 ```
 
 ```powershell
