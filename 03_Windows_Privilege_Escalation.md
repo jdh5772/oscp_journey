@@ -95,6 +95,15 @@ icacls "C:\xampp\apache\bin\httpd.exe"
 ---
 
 ## Service Binary Hijacking
+```powershell
+Get-Service > service.txt
+
+# 실행 중인 서비스만
+Get-Service | Where-Object {$_.Status -eq "Running"} > service.txt
+
+# cmd
+sc query > service.txt
+```
 
 ### C 코드로 악성 실행 파일 생성
 ```c
