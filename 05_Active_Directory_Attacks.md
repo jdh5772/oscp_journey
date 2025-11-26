@@ -48,7 +48,7 @@ whoami
 
 net user <user>
 ner user <user> /domain
-net group <group>
+net localgroup <group>
 net group <group> /domain
 
 Get-LocalUser <user>
