@@ -50,6 +50,12 @@ net user <user>
 ner user <user> /domain
 net group <group>
 net group <group> /domain
+
+Get-LocalUser <user>
+Get-ADUser <user>
+Get-LocalGroup <group>
+Get-ADGroup <group>
+Get-LocalGroupMember adminteam
 ```
 ---
 
