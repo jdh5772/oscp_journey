@@ -55,7 +55,8 @@ Get-LocalUser <user>
 Get-ADUser <user>
 Get-LocalGroup <group>
 Get-ADGroup <group>
-Get-LocalGroupMember adminteam
+Get-LocalGroupMember <group>
+Get-ADGroupMember <group>
 ```
 ---
 
