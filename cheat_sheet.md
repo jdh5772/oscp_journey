@@ -46,3 +46,4 @@ sudo nmap 10.129.2.28 -p50000 -sS -Pn -n --disable-arp-ping --packet-trace --sou
 ncat -nv -p 53 10.129.2.28 50000
 ```
 - DNS는 TCP,UDP 둘다 53번 포트에서 작동하며, 크기에 따라서 사용이 달라진다.
+- 53번 포트가 필터링 되어도 위의 명령어는 사용 가능.
