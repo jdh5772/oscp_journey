@@ -103,3 +103,23 @@ dnsenum --dnsserver 10.129.167.221 --enum -p 0 -s 0 -f /usr/share/seclists/Disco
 smtp-user-enum -M VRFY -U footprinting-wordlist.txt -t 10.129.42.195 -w 20 -v
 ```
 - some SMTP servers have higher response times.
+
+## IMAP and POP3
+```bash
+openssl s_client -connect 10.129.14.128:pop3s
+
+openssl s_client -connect 10.129.14.128:imaps
+```
+### IMAP
+```bash
+telnet <ip> 143
+
+a LOGIN <id> <password>
+a LIST "" *
+a SELECT INBOX
+a SEARCH ALL
+a fetch <NUMBER> body[header]
+a fetch <NUMBER> body[text]
+a LOGOUT
+```
+- 메일박스를 선택할 때 대소문자 구별해서 선택해야 한다.
