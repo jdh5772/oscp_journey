@@ -79,9 +79,9 @@ queryuser <RID>
 ```bash
 showmount -e <target>
 
-sudo mount -t nfs 10.129.14.128:/ ./target-NFS/ -o nolock
+sudo mount -t nfs 10.129.14.128:/target ./target/ -o nolock
 
-sudo umount ./target-NFS
+sudo umount ./target
 ```
 
 ## DNS
