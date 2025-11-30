@@ -102,3 +102,4 @@ dnsenum --dnsserver 10.129.167.221 --enum -p 0 -s 0 -f /usr/share/seclists/Disco
 ```bash 
 smtp-user-enum -M VRFY -U footprinting-wordlist.txt -t 10.129.42.195 -w 20 -v
 ```
+- some SMTP servers have higher response times.
