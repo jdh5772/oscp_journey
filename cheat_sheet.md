@@ -57,3 +57,48 @@ ncat -nv -p 53 10.129.2.28 50000
 openssl s_client -connect 10.129.14.136:21 -starttls ftp
 ```
 - nmap 스캔시 `AUTH TLS`가 보이면 SSL 연결 지원이라는 것을 확인할 수 있다.
+
+## SMB rpc client
+```bash
+rpcclient -U '' -N 10.129.23.91
+
+#rpcclient
+querydominfo
+netshareenumall
+netsharegetinfo <share>
+enumdomusers
+queryuser <RID>
+```
+- `querydominfo` : Provides domain, server, and user information of deployed domains.
+- `netshareenumall` : Enumerates all available shares.
+- `netsharegetinfo <share>` : Provides information about a specific share.
+- `enumdomusers` : Enumerates all domain users.
+- `queryuser <RID>` : Provides information about a specific user.
+
+## NFS
+```bash
+showmount -e <target>
+
+sudo mount -t nfs 10.129.14.128:/ ./target-NFS/ -o nolock
+
+sudo umount ./target-NFS
+```
+
+## DNS
+```bash
+dig ns inlanefreight.htb @10.129.14.128
+
+dig CH TXT version.bind @10.129.120.85
+
+dig any inlanefreight.htb @10.129.14.128
+
+dig axfr inlanefreight.htb @10.129.14.128
+
+dnsenum --dnsserver 10.129.167.221 --enum -p 0 -s 0 -f /usr/share/seclists/Discovery/DNS/subdomains-top1million-20000.txt inlanefreight.htb
+```
+- nmap에서 DNS가 발견되면 사용
+
+## SMTP
+```bash 
+smtp-user-enum -M VRFY -U footprinting-wordlist.txt -t 10.129.42.195 -w 20 -v
+```
