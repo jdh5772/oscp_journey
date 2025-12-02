@@ -454,6 +454,9 @@ use auxiliary/scanner/ipmi/ipmi_dumphashes
 ---
 
 ## 🖥️ RDP (Remote Desktop Protocol)
+```bash
+xfreerdp /v:10.10.10.132 /u:administrator /p:'Password0@' /drive:linux,/home/plaintext/htb/academy/filetransfer
+```
 
 **포트**: 3389
 
