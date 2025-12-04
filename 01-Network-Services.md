@@ -198,6 +198,10 @@ use auxiliary/scanner/ipmi/ipmi_dumphashes
 ---
 
 ## 🖥️ RDP (Remote Desktop Protocol)
+```powershell
+reg add HKLM\System\CurrentControlSet\Control\Lsa /t REG_DWORD /v DisableRestrictedAdmin /d 0x0 /f
+```
+
 ```bash
 xfreerdp /v:10.10.10.132 /u:administrator /p:'Password0@' /drive:linux,/home/plaintext/htb/academy/filetransfer
 ```
