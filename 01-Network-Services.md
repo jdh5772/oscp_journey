@@ -15,6 +15,10 @@ openssl s_client -connect 10.129.14.136:21 -starttls ftp
 ---
 
 ## 🖥️ SMB & RPC Client
+### NTLM Relay Attack
+```bash
+impacket-ntlmrelayx --no-http-server -smb2support -t 192.168.220.146 -c '<payload>'
+```
 
 ### RPC Client 명령어
 
