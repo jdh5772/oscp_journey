@@ -141,11 +141,7 @@ IMPERSONATE 권한을 이용하여 다른 사용자로 권한을 전환할 수 �
 
 ```mssql
 -- Impersonate 가능한 사용자 확인
-1> SELECT distinct b.name
-2> FROM sys.server_permissions a
-3> INNER JOIN sys.server_principals b
-4> ON a.grantor_principal_id = b.principal_id
-5> WHERE a.permission_name = 'IMPERSONATE'
+SELECT distinct b.name FROM sys.server_permissions a INNER JOIN sys.server_principals b ON a.grantor_principal_id = b.principal_id WHERE a.permission_name = 'IMPERSONATE'
 6> GO
 
 -- 현재 사용자 및 권한 확인
