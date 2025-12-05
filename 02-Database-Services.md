@@ -313,28 +313,3 @@ SELECT * FROM user_role_privs;
 -- sys.user$: 시스템 사용자 정보 (DBA 권한 필요)
 SELECT name, password FROM sys.user$;
 ```
-
-**추가 유용한 쿼리**:
-
-```sql
--- 모든 사용자 계정 조회
-SELECT username, account_status, created FROM dba_users;
-
--- 테이블 컬럼 정보 확인
-SELECT column_name, data_type FROM all_tab_columns WHERE table_name = 'USERS';
-
--- 현재 사용자 확인
-SELECT user FROM dual;
-
--- 데이터베이스 버전 확인
-SELECT * FROM v$version;
-
--- 데이터베이스 파일 위치 확인
-SELECT name FROM v$datafile;
-
--- 시스템 권한 확인
-SELECT * FROM session_privs;
-
--- DBA 역할 여부 확인
-SELECT * FROM user_role_privs WHERE granted_role = 'DBA';
-```
