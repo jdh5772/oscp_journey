@@ -7,10 +7,9 @@ sudo nmap -p 23 -sC -sV -oA mew 10.129.1.17
 ```
 <img width="1100" height="206" alt="image" src="https://github.com/user-attachments/assets/02f2ddd0-5bd2-4582-b8af-00a9e7b32377" />
 
-- 23번 포트에서 Telnet 서비스 실행 중 확인
 ---
 ## 2. 열거(Enumeration)
-### Telnet
+### Telnet(23)
 - Linux/Unix 시스템에서 원격 접속을 위한 프로토콜
 - 사용법 : `telnet <ip> <port>`
 
