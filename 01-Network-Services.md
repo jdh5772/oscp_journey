@@ -84,6 +84,10 @@ sudo umount ./target
 ```bash
 # SMTP 사용자 열거
 smtp-user-enum -M VRFY -U footprinting-wordlist.txt -t 10.129.42.195 -w 20 -v
+
+smtp-user-enum -M RCPT -U userlist.txt -D inlanefreight.htb -t 10.129.203.7
+
+smtp-user-enum -M EXPN -U userlist.txt -D inlanefreight.htb -t 10.129.203.7
 ```
 
 ### 옵션 설명
