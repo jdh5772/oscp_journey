@@ -25,7 +25,7 @@ telnet 10.129.1.17 23
 
 ### 로그인 시도
 - 대부분의 Linux 시스템에서 관리자 계정 이름은 `root`
-- 먼저 `root` 계정으로 로그인 시도
+- 먼저 `root` 계정으로 로그인 시도(만약 실패시 administrator,admin으로 시도)
 - root 계정으로 패스워드 없이 로그인 성공!
 - 시스템에 대한 완전한 관리자 권한 획득
 <img width="1100" height="315" alt="image" src="https://github.com/user-attachments/assets/a39aaff2-0af4-46cc-a3fc-625764e2f3cc" />
