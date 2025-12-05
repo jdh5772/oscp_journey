@@ -1,4 +1,4 @@
-# Hack the Box/Starting Point/Meow
+# Meow
 
 ## 1. 정찰(Reconnaissance)
 
