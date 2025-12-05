@@ -5,7 +5,8 @@ sudo nmap -p 135,139,445,5985 -sC -sV -vv -oA dancing 10.129.1.12
 ```
 <img width="858" height="475" alt="image" src="https://github.com/user-attachments/assets/33b240ab-5ea2-41b8-aac7-2b88c0fa3aad" />
 
-- SMB(445), WINRM(5985) 발견
+- SMB(445)
+- WINRM(5985)
 
 ## 2.  열거(Enumeration)
 ### SMB
