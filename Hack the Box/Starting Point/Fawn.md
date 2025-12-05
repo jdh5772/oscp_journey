@@ -10,6 +10,7 @@ sudo nmap -p 21 -sC -sV -oA fawn 10.129.1.14
 - anonymous 로그인 허용
 
 ## 3. 공격(Exploitation)
+### FTP anonymous 로그인 시도
 ```bash
 ftp 10.129.1.14
 ```
