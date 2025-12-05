@@ -6,7 +6,7 @@ sudo nmap -p 21 -sC -sV -oA fawn 10.129.1.14
 <img width="1100" height="369" alt="image" src="https://github.com/user-attachments/assets/46eb2a3c-19ee-4bd6-b91b-6799781d43ca" />
 
 ## 2. 열거(Enumeration)
-### FTP
+### FTP(21)
 - anonymous 로그인 허용
 
 ## 3. 공격(Exploitation)
