@@ -1,5 +1,4 @@
 # Fawn - HackTheBox StartingPoint
-- Hack The Box/Starting Point/Fawn
 ## 1. 정찰(Reconnaissance)
 ```bash
 sudo nmap -p 21 -sC -sV -oA fawn 10.129.1.14
