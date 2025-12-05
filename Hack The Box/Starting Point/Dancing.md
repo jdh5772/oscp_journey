@@ -8,6 +8,7 @@ sudo nmap -p 135,139,445,5985 -sC -sV -vv -oA dancing 10.129.1.12
 - SMB(445)
 - WINRM(5985)
 
+---
 ## 2.  열거(Enumeration)
 ### SMB
 - `guest`로 로그인 시도 및 탐색
@@ -15,6 +16,7 @@ sudo nmap -p 135,139,445,5985 -sC -sV -vv -oA dancing 10.129.1.12
 ### winrm
 -  수집된 credential로 로그인 시도
 
+---
 ## 3.  공격(Exploitation)
 ### SMB
 ```bash
