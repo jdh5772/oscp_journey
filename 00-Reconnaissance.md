@@ -99,6 +99,9 @@ dig CH TXT version.bind @10.129.120.85
 
 # 모든 레코드 타입
 dig any inlanefreight.htb @10.129.14.128
+
+# 해당 웹서버가 아닌 DNS서버에 요청
+dig any inlanefreight.htb @<DNS SERVER>
 ```
 
 ### Zone Transfer (AXFR)
